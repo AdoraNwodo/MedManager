@@ -9,8 +9,11 @@ Users are also  able to update their profile and add medications. <br />
 Users receive reminders when it is time to take the medication.<br />
 The app categorizes medication intake by month. <br />
 Users can search for medication by name <br />
+<a href="https://github.com/NenneAdora/MedManager/tree/master/final_apk">See apk here</a>
+<br />
 
 <h3>MedManager Mockups</h3>
+<a href="https://github.com/NenneAdora/MedManager/tree/master/medmanager_ui">See all mockups here</a>
 <p>
 <img src="https://github.com/NenneAdora/MedManager/blob/master/medmanager_ui/splash_screen.jpg" height="400"/>
 <img src="https://github.com/NenneAdora/MedManager/blob/master/medmanager_ui/onboarding_screen_1.jpg" height="400"/>
@@ -27,6 +30,6 @@ Users can search for medication by name <br />
 <img src="https://github.com/NenneAdora/MedManager/blob/master/medmanager_ui/edit_profile_screen.jpg" height="400"/>
 </p>
 
-<a href="https://github.com/NenneAdora/MedManager/tree/master/medmanager_ui">See all mockups here</a>
+
 
 
