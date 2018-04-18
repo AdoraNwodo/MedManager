@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.developer.nennenwodo.medmanager">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".splash.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".onboarding.OnboardingActivity"
+            android:label="@string/title_activity_onboarding"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".auth.SignInActivity"
+            android:label="@string/title_activity_welcome"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DashboardActivity"
+            android:label="@string/title_activity_dashboard"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".medication.NewMedicationActivity"
+            android:label="@string/title_activity_new_medication"
+            android:parentActivityName=".DashboardActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.nennenwodo.medmanager.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".medication.SingleMedicationActivity"
+            android:label="@string/title_activity_single_medication"
+            android:parentActivityName=".DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.nennenwodo.medmanager.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".medication.EditMedicationActivity"
+            android:label="@string/title_activity_edit_medication"
+            android:parentActivityName=".medication.SingleMedicationActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.nennenwodo.medmanager.medication.SingleMedicationActivity" />
+        </activity>
+        <activity
+            android:name=".profile.ProfileActivity"
+            android:label="@string/title_activity_edit_profile"
+            android:parentActivityName=".DashboardActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.nennenwodo.medmanager.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".account.AccountActivity"
+            android:label="@string/title_activity_account"
+            android:parentActivityName=".DashboardActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.nennenwodo.medmanager.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".contact.ContactActivity"
+            android:label="@string/title_activity_contact"
+            android:parentActivityName=".DashboardActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.nennenwodo.medmanager.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".faqs.FAQActivity"
+            android:label="@string/title_activity_faq"
+            android:parentActivityName=".DashboardActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.nennenwodo.medmanager.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".monthlycategory.SingleCategoryActivity"
+            android:label="@string/title_activity_single_category"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.nennenwodo.medmanager.DashboardActivity" />
+        </activity>
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="true"/>
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".utils.BaseActivity" />
+        <activity
+            android:name=".medication.TodaysMedicationActivity"
+            android:label="@string/title_activity_todays_medication"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.developer.nennenwodo.medmanager.DashboardActivity" />
+        </activity>
+    </application>
+
+</manifest>

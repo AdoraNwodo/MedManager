@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.developer.nennenwodo.medmanager.contact.ContactActivity"
+    tools:showIn="@layout/activity_contact"
+    android:padding="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginBottom="@dimen/activity_section_margin"
+        android:layout_marginTop="@dimen/activity_section_margin"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_view_call"
+                android:clickable="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/telephone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/call"
+                android:layout_marginTop="@dimen/contact_text_margin_top"
+                android:textSize="12sp"
+                android:textColor="@color/contact_activity_highlight_text"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_view_envelop"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/envelope_circle"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mail"
+                android:layout_marginTop="@dimen/contact_text_margin_top"
+                android:textSize="12sp"
+                android:textColor="@color/contact_activity_highlight_text"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_view_github"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/www"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/github"
+                android:layout_marginTop="@dimen/contact_text_margin_top"
+                android:textSize="12sp"
+                android:textColor="@color/contact_activity_highlight_text"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_view_linkedin"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/linkedin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/linkedin"
+                android:layout_marginTop="@dimen/contact_text_margin_top"
+                android:textSize="12sp"
+                android:textColor="@color/contact_activity_highlight_text"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/whatsapp"
+        />
+    <TextView
+        android:id="@+id/textview_whatsapp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/_234_703_361_0860"
+        android:textColor="@color/contact_activity_highlight_text"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="@dimen/contact_horizontal_rule_margin"
+        android:layout_marginBottom="@dimen/contact_horizontal_rule_margin"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/slack"
+        />
+    <TextView
+        android:id="@+id/textview_slack_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nenneadora"
+        android:textColor="@color/contact_activity_highlight_text"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="@dimen/contact_horizontal_rule_margin"
+        android:layout_marginBottom="@dimen/contact_horizontal_rule_margin"
+        />
+
+
+
+</LinearLayout>

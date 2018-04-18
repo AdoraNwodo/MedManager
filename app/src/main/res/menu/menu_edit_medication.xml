@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.developer.nennenwodo.medmanager.medication.SingleMedicationActivity">
+
+    <item
+        android:id="@+id/action_edit_medication"
+        android:icon="@drawable/ic_edit_black_24dp"
+        android:enabled="true"
+        android:orderInCategory="200"
+        android:title="@string/edit"
+        android:visible="true"
+        app:showAsAction="always" />
+
+</menu>

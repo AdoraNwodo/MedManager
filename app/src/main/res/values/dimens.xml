@@ -1,0 +1,25 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_text_view_padding">5dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_top_margin">50dp</dimen>
+    <dimen name="fragment_top_margin">60dp</dimen>
+    <dimen name="activity_heading_text_size">40sp</dimen>
+    <dimen name="profile_name_text_size">20sp</dimen>
+    <dimen name="profile_email_text_size">14sp</dimen>
+    <dimen name="activity_section_margin">25dp</dimen>
+    <dimen name="form_section_margin">12dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="form_input_padding">10dp</dimen>
+    <dimen name="text_size_med_time">14sp</dimen>
+    <dimen name="activity_inner_card_padding">40sp</dimen>
+    <dimen name="contact_text_margin_top">3dp</dimen>
+    <dimen name="contact_horizontal_rule_margin">10dp</dimen>
+    <dimen name="onboarding_text_padding">25dp</dimen>
+    <dimen name="textview_label_width">80dp</dimen>
+    <dimen name="edit_profile_field_height">40dp</dimen>
+    <dimen name="recycler_view_margin_bottom">60dp</dimen>
+    <dimen name="fragment_description_text_size">20sp</dimen>
+</resources>

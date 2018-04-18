@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e8e8e8"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.developer.nennenwodo.medmanager.account.AccountActivity"
+    tools:showIn="@layout/activity_account">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorSectionBorders"
+        />
+    <RelativeLayout
+        android:id="@+id/relative_layout_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/settings_list_item_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@string/logout"
+            android:textSize="@dimen/profile_email_text_size"
+            android:gravity="center_vertical"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:orientation="vertical"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                android:layout_gravity="right"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorSectionBorders"
+        />
+    <RelativeLayout
+        android:id="@+id/relative_layout_delete_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/settings_list_item_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@string/delete_my_account"
+            android:textSize="@dimen/profile_email_text_size"
+            android:textColor="@color/colorImportant"
+            android:gravity="center_vertical"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:orientation="vertical"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                android:layout_gravity="right"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorSectionBorders"
+        android:layout_marginBottom="@dimen/activity_section_margin"
+        />
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00B0FF</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#000000</color>
+    <color name="colorSectionBorders">#cccccc</color>
+    <color name="colorHighlight">#B9F6CA</color>
+    <color name="colorLightGray">#F1F1F1</color>
+    <color name="colorSwipeBackground">#ff0077</color>
+    <color name="colorHeadingOne">#0a91EE</color>
+    <color name="colorHeadingTwo">#00C800</color>
+    <color name="colorHeadingThree">#873AF7</color>
+    <color name="colorImportant">#C51162</color>
+
+
+    <color name="colorScreenOne">#00B0FF</color>
+    <color name="colorScreenTwo">#673AB7</color>
+    <color name="colorScreenThree">#00C853</color>
+    <color name="colorScreenFour">#C51162</color>
+
+
+    <!--<color name="dot_dark_screen_one">#0091EA</color>
+    <color name="dot_dark_screen_two">#512DA8</color>
+    <color name="dot_dark_screen_three">#4CAF50</color>
+    <color name="dot_dark_screen_four">#AD1457</color>-->
+
+
+    <color name="dot_light_screen_one">#80D8FF</color>
+    <color name="dot_light_screen_two">#9575CD</color>
+    <color name="dot_light_screen_three">#B9F6CA</color>
+    <color name="dot_light_screen_four">#FF80AB</color>
+    <color name="contact_activity_highlight_text">#5882FA</color>
+    <color name="dark_middle_gray">#999</color>
+    <color name="middle_gray">#ccc</color>
+    <color name="light_gray">#eee</color>
+    <color name="light_blue">#80D8FF</color>
+
+
+    <array name="dot_active">
+        <item>@color/light_blue</item>
+        <item>@color/light_blue</item>
+        <item>@color/light_blue</item>
+        <item>@color/light_blue</item>
+    </array>
+
+    <array name="dot_inactive">
+        <item>@color/light_gray</item>
+        <item>@color/light_gray</item>
+        <item>@color/light_gray</item>
+        <item>@color/light_gray</item>
+    </array>
+</resources>

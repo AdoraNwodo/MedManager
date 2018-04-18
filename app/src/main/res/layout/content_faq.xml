@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.developer.nennenwodo.medmanager.faqs.FAQActivity"
+    tools:showIn="@layout/activity_faq"
+    android:padding="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    >
+
+    <!--What is MedManager-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/what_is_medmanager"
+        android:textColor="@color/contact_activity_highlight_text"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/med_manager_description"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="@dimen/contact_horizontal_rule_margin"
+        android:layout_marginBottom="@dimen/contact_horizontal_rule_margin"
+        />
+    <!--End What is MedManager-->
+
+    <!--How do I use this app?-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/how_to_use"
+        android:textColor="@color/contact_activity_highlight_text"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/how_to_use_desc"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="@dimen/contact_horizontal_rule_margin"
+        android:layout_marginBottom="@dimen/contact_horizontal_rule_margin"
+        />
+    <!--End How do I use this app-->
+
+    <!--Do I have to uninstall the app if I don't want reminders?-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/should_i_uninstall"
+        android:textColor="@color/contact_activity_highlight_text"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/you_can_turn_off_notifications"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="@dimen/contact_horizontal_rule_margin"
+        android:layout_marginBottom="@dimen/contact_horizontal_rule_margin"
+        />
+    <!--End How do I use this app?-->
+
+</LinearLayout>

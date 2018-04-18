@@ -1,0 +1,165 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:name="com.developer.nennenwodo.medmanager.SingleMedicationActivity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/recycler_view_margin_bottom"
+            android:descendantFocusability="blocksDescendants"
+            >
+
+        <TextView
+            android:id="@+id/textview_interval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:background="@color/colorImportant"
+            android:gravity="center"
+            android:padding="@dimen/activity_text_view_padding"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:text="@string/basic_details"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_text_view_padding"
+            android:paddingBottom="@dimen/activity_text_view_padding"
+            android:textSize="16sp"
+            />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_vertical_margin"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardElevation="3dp"
+            card_view:cardUseCompatPadding="true">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="@dimen/activity_vertical_margin"
+               android:orientation="vertical">
+               <TextView
+                   android:id="@+id/textview_medication_description"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textSize="14sp"
+                   android:layout_marginTop="10dp"
+                   />
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/start"
+                   android:layout_marginTop="15dp"
+                   android:textColor="@color/colorHeadingTwo"
+                   android:textStyle="bold"
+                   android:textSize="16sp"
+                   />
+               <TextView
+                   android:id="@+id/textview_medication_start_date"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="@dimen/text_size_med_time"
+                   />
+               <TextView
+                   android:id="@+id/textview_medication_start_time"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="@dimen/text_size_med_time"
+                   />
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/end"
+                   android:textSize="16sp"
+                   android:layout_marginTop="15dp"
+                   android:textColor="@color/colorImportant"
+                   android:textStyle="bold"
+                   />
+               <TextView
+                   android:id="@+id/textview_medication_end_date"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="@dimen/text_size_med_time"
+                   android:layout_marginBottom="15dp"
+                   />
+           </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/todaysScheduleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:text="@string/todays_schedule"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_text_view_padding"
+            android:paddingBottom="@dimen/activity_text_view_padding"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textSize="16sp"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/todaysRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/pastScheduleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/past"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_text_view_padding"
+            android:paddingBottom="@dimen/activity_text_view_padding"
+            android:textSize="16sp"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/pastRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/upcomingsScheduleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/upcoming"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_text_view_padding"
+            android:paddingBottom="@dimen/activity_text_view_padding"
+            android:textSize="16sp"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/upcomingRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>

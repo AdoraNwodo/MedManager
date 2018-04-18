@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/home_fragment"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.developer.nennenwodo.medmanager.HomeFragment"
+    >
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_top_margin">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/search_view_bg"
+                app:queryHint="@string/search"
+                app:defaultQueryHint="@string/search"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/medicationRecyclerView"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/recycler_view_margin_bottom"
+                />
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/textview_no_meds_yet"
+        android:textSize="@dimen/fragment_description_text_size"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin"
+        android:textAlignment="center"
+        android:text="@string/no_meds_yet"
+        android:textColor="@color/middle_gray"/>
+
+</RelativeLayout>

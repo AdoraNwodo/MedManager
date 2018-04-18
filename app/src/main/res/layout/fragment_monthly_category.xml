@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/monthly_category_fragment"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/fragment_top_margin"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.developer.nennenwodo.medmanager.MonthlyCategoryFragment">
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/categoryRecyclerView"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/recycler_view_margin_bottom"/>
+
+    <TextView
+        android:id="@+id/textview_no_categories_yet"
+        android:textSize="@dimen/fragment_description_text_size"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin"
+        android:textAlignment="center"
+        android:text="@string/no_categories_yet"
+        android:textColor="@color/middle_gray"/>
+
+</LinearLayout>
