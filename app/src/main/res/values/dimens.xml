@@ -24,6 +24,4 @@
     <dimen name="fragment_description_text_size">20sp</dimen>
     <dimen name="todays_med_heading_text_size">17sp</dimen>
     <dimen name="todays_med_body_text_size">12sp</dimen>
-    <dimen name="todays_med_body_text_size">12sp</dimen>
-    <dimen name="todays_med_body_text_size">12sp</dimen>
 </resources>
