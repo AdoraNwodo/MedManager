@@ -39,14 +39,12 @@ public class BootReceiver extends BroadcastReceiver {
             while(cursor.moveToNext()){
 
                 int id = cursor.getInt(cursor.getColumnIndex(MedicationDBContract.MedicationEntry._ID));
-                String name = cursor.getString(cursor.getColumnIndex(MedicationDBContract.MedicationEntry.NAME));
-                String description = cursor.getString(cursor.getColumnIndex(MedicationDBContract.MedicationEntry.DESCRIPTION));
                 int frequency = cursor.getInt(cursor.getColumnIndex(MedicationDBContract.MedicationEntry.INTERVAL));
                 String startDate = cursor.getString(cursor.getColumnIndex(MedicationDBContract.MedicationEntry.START_DATE));
                 String startTime = cursor.getString(cursor.getColumnIndex(MedicationDBContract.MedicationEntry.START_TIME));
                 String endDate = cursor.getString(cursor.getColumnIndex(MedicationDBContract.MedicationEntry.END_DATE));
 
-
+                //start calendar date
                 Calendar calStartDate = Calendar.getInstance();
                 calStartDate.set(Calendar.YEAR, Utility.getYear(startDate));
                 calStartDate.set(Calendar.MONTH, Utility.getMonth(startDate));
@@ -54,6 +52,7 @@ public class BootReceiver extends BroadcastReceiver {
                 calStartDate.set(Calendar.HOUR_OF_DAY, Utility.getHour(startTime));
                 calStartDate.set(Calendar.MINUTE, Utility.getMinute(startTime));
 
+                //end calendar date
                 Calendar calEndDate = Calendar.getInstance();
                 calEndDate.set(Calendar.YEAR, Utility.getYear(endDate));
                 calEndDate.set(Calendar.MONTH, Utility.getMonth(endDate));
@@ -71,17 +70,12 @@ public class BootReceiver extends BroadcastReceiver {
 
                     Date dateTime = calStartDate.getTime();
                     if(dateTime.before(today)){
+                        //add hours to date if we are still encountering past dates
                         calStartDate.add(Calendar.HOUR, 24/frequency);
                     }else{
-                        int year = calStartDate.get(Calendar.YEAR);
-                        int month = calStartDate.get(Calendar.MONTH) + 1;
-                        int day = calStartDate.get(Calendar.DAY_OF_MONTH);
-
-                        //String formattedStartDate = Utility.formatDate(day,month,year);
-
+                        //on seeing future date, set alarm and break out of loop
                         setAlarm(calStartDate, context, id, frequency);
 
-                        //setAlarm(formattedStartDate, endDate, startTime, context, id, frequency);
                         break;
                     }
                 }
@@ -105,15 +99,6 @@ public class BootReceiver extends BroadcastReceiver {
      * @param frequency
      */
     private void setAlarm(Calendar start, Context ctx, int id, int frequency){
-
-        /*Calendar ic_calendar = Calendar.getInstance();
-
-
-        ic_calendar.set(Calendar.YEAR, Utility.getYear(startDate));
-        ic_calendar.set(Calendar.MONTH, Utility.getMonth(startDate));
-        ic_calendar.set(Calendar.DAY_OF_MONTH, Utility.getDay(startDate));
-        ic_calendar.set(Calendar.HOUR_OF_DAY, Utility.getHour(startTime));
-        ic_calendar.set(Calendar.MINUTE, Utility.getMinute(startTime));*/
 
         Intent intent = new Intent(ctx,AlarmReceiver.class);
         intent.putExtra("MEDICATION_ID", id);
