@@ -28,7 +28,7 @@ public class MonthlyCategoryListAdapter extends RecyclerView.Adapter<MonthlyCate
 
         public MyViewHolder(View view) {
             super(view);
-            monthAndYear = view.findViewById(R.id.monthAndYear);
+            monthAndYear = view.findViewById(R.id.text_view_month_and_year);
             relativeLayoutItem = view.findViewById(R.id.relative_layout_item);
         }
     }

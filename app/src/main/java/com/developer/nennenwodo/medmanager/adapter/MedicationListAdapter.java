@@ -33,8 +33,8 @@ public class MedicationListAdapter extends RecyclerView.Adapter<MedicationListAd
 
         private MyViewHolder(View view) {
             super(view);
-            name = view.findViewById(R.id.name);
-            dosage = view.findViewById(R.id.dosage);
+            name = view.findViewById(R.id.text_name);
+            dosage = view.findViewById(R.id.text_dosage);
             viewBackground = view.findViewById(R.id.view_background);
             viewForeground = view.findViewById(R.id.view_foreground);
             status = view.findViewById(R.id.status);

@@ -15,41 +15,37 @@
 
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/text_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
             android:maxLines="1"
             android:textColor="@android:color/black"
             android:textStyle="bold"
-            android:text="@string/medication_name"
-            android:textSize="17dp" />
+            android:textSize="@dimen/todays_med_heading_text_size" />
 
         <TextView
-            android:id="@+id/description"
+            android:id="@+id/text_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:textColor="@android:color/darker_gray"
-            android:text="@string/description"
-            android:textSize="12dp" />
+            android:textSize="@dimen/todays_med_body_text_size" />
 
         <TextView
-            android:id="@+id/dosage"
+            android:id="@+id/text_dosage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:textColor="@android:color/darker_gray"
-            android:text="Three times daily for seven days"
-            android:textSize="12dp" />
+            android:textSize="@dimen/todays_med_body_text_size" />
         <TextView
-            android:id="@+id/endDate"
+            android:id="@+id/text_end_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:textColor="@color/colorHeadingOne"
-            android:text="date ended"
-            android:textSize="12dp" />
+            android:textSize="@dimen/todays_med_body_text_size" />
 
     </LinearLayout>
 </FrameLayout>

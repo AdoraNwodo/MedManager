@@ -102,5 +102,13 @@
     <string name="upcoming">Upcoming</string>
     <string name="completed">Completed!</string>
     <string name="frequency_or_interval">Medication should be taken # times in a day. Please specify number that gives a perfect timely interval. e.g. 3 times a day would give a perfect timely interval of 8 hours</string>
+    <string name="get_started">Get Started</string>
+    <string name="screen_four_desc">Sign in and start tracking your medications. Its easy!</string>
+    <string name="screen_one_desc">All your medications in one place, easily searchable</string>
+    <string name="manage_your_medications">Manage Your Medications</string>
+    <string name="screen_three_desc">Keep track of your monthly medication intake.</string>
+    <string name="monthly_tracking">Monthly Tracking</string>
+    <string name="screen_two_desc">Never miss your medications. Be reminded when it is time to take medications</string>
+    <string name="get_reminders">Get Reminders</string>
 
 </resources>

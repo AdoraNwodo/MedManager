@@ -23,10 +23,10 @@ public class TodaysMedicationListAdapter extends RecyclerView.Adapter<TodaysMedi
 
         private MyViewHolder(View view) {
             super(view);
-            name = view.findViewById(R.id.name);
-            description = view.findViewById(R.id.description);
-            dosage = view.findViewById(R.id.dosage);
-            finish = view.findViewById(R.id.endDate);
+            name = view.findViewById(R.id.text_name);
+            description = view.findViewById(R.id.text_description);
+            dosage = view.findViewById(R.id.text_dosage);
+            finish = view.findViewById(R.id.text_end_date);
         }
     }
 
