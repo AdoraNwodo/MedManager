@@ -10,4 +10,23 @@ Users receive reminders when it is time to take the medication.<br />
 The app categorizes medication intake by month. <br />
 Users can search for medication by name <br />
 
+<h3>MedManager Mockups</h3>
+<p>
+<img src="https://github.com/NenneAdora/MedManager/blob/master/medmanager_ui/splash_screen.jpg" height="400"/>
+<img src="https://github.com/NenneAdora/MedManager/blob/master/medmanager_ui/onboarding_screen_1.jpg" height="400"/>
+  <img src="https://github.com/NenneAdora/MedManager/blob/master/medmanager_ui/onboarding_screen_2.jpg" height="400"/>
+<img src="https://github.com/NenneAdora/MedManager/blob/master/medmanager_ui/onboarding_screen_3.jpg" height="400"/>
+  <img src="https://github.com/NenneAdora/MedManager/blob/master/medmanager_ui/onboarding_screen_4.jpg" height="400"/>
+<img src="https://github.com/NenneAdora/MedManager/blob/master/medmanager_ui/google_sign_in_screen.jpg" height="400"/>
+    <img src="https://github.com/NenneAdora/MedManager/blob/master/medmanager_ui/personal_screen.jpg" height="400"/>
+<img src="https://github.com/NenneAdora/MedManager/blob/master/medmanager_ui/view_medication_screen.jpg" height="400"/>
+
+  <img src="https://github.com/NenneAdora/MedManager/blob/master/medmanager_ui/medication_list_screen_instances.jpg" height="400"/>
+<img src="https://github.com/NenneAdora/MedManager/blob/master/medmanager_ui/categories_list_screen_instances.jpg" height="400"/>
+  <img src="https://github.com/NenneAdora/MedManager/blob/master/medmanager_ui/new_medication_screen.jpg" height="400"/>
+<img src="https://github.com/NenneAdora/MedManager/blob/master/medmanager_ui/edit_profile_screen.jpg" height="400"/>
+</p>
+
+<a href="https://github.com/NenneAdora/MedManager/tree/master/medmanager_ui">See all mockups here</a>
+
 
