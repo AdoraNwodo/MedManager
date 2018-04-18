@@ -51,7 +51,7 @@ public class PersonalFragment extends Fragment implements View.OnClickListener, 
         @SuppressLint("RestrictedApi") GoogleSignInAccount account = getLastSignedInAccount(getActivity());
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_settings, container, false);
+        View view = inflater.inflate(R.layout.fragment_personal, container, false);
 
         //inject user defined views
         final RelativeLayout contactMeRelativeLayout = (RelativeLayout) view.findViewById(R.id.relative_layout_contact_me);
