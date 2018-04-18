@@ -1,10 +1,5 @@
 package com.developer.nennenwodo.medmanager.onboarding;
 
-import android.content.SharedPreferences;
-
-/**
- * Created by nennenwodo on 4/7/18.
- */
 
 public interface OnboardingContract {
 

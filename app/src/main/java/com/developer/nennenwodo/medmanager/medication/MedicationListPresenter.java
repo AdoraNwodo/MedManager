@@ -5,14 +5,11 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.widget.RecyclerView;
 
 import com.developer.nennenwodo.medmanager.AlarmReceiver;
 import com.developer.nennenwodo.medmanager.adapter.MedicationListAdapter;
-import com.developer.nennenwodo.medmanager.model.preferences.SharedPrefContract;
 import com.developer.nennenwodo.medmanager.model.preferences.SharedPrefHelper;
 import com.developer.nennenwodo.medmanager.model.sqlite.MedicationDBContract;
 import com.developer.nennenwodo.medmanager.model.sqlite.MedicationDBHelper;

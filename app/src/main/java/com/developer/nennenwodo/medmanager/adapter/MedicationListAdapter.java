@@ -1,6 +1,5 @@
 package com.developer.nennenwodo.medmanager.adapter;
 
-
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -18,6 +17,7 @@ import com.developer.nennenwodo.medmanager.utils.Utility;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class MedicationListAdapter extends RecyclerView.Adapter<MedicationListAdapter.MyViewHolder> {
     private Context context;
@@ -59,7 +59,6 @@ public class MedicationListAdapter extends RecyclerView.Adapter<MedicationListAd
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         final Medication item = medicationList.get(position);
         holder.name.setText(item.getName());
-        //holder.description.setText(item.getDescription());
         holder.dosage.setText("To be taken " + item.getInterval() + " time(s) a day ");
         int daysBetween = (int) Utility.daysBetween(item.getStartDate(), item.getEndDate());
         if(daysBetween >= 0){
@@ -103,7 +102,7 @@ public class MedicationListAdapter extends RecyclerView.Adapter<MedicationListAd
     }
 
     /**
-     * Sets filter for ic_search function.
+     * Sets filter for search function.
      * @param newMedicationList
      */
     public  void setFilter(ArrayList<Medication> newMedicationList){

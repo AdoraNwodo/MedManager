@@ -136,7 +136,6 @@ public class EditMedicationActivity extends BaseActivity implements AdapterView.
     @Override
     public void displayMedicationStartDate(String startDate) {
         mEditTextStartDate.setText(startDate);
-
     }
 
     @Override
@@ -148,7 +147,6 @@ public class EditMedicationActivity extends BaseActivity implements AdapterView.
     @Override
     public void displayMedicationStartTime(String startTime) {
         mEditTextStartTime.setText(startTime);
-
     }
 
     @Override

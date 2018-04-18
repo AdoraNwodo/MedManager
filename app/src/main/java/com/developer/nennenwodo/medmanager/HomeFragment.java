@@ -26,9 +26,6 @@ import com.developer.nennenwodo.medmanager.utils.RecyclerItemTouchHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.app.Activity.RESULT_OK;
-
-
 public class HomeFragment extends Fragment implements RecyclerItemTouchHelper.RecyclerItemTouchHelperListener,
         SearchView.OnQueryTextListener, MedicationListContract.View{
 
@@ -109,7 +106,7 @@ public class HomeFragment extends Fragment implements RecyclerItemTouchHelper.Re
 
     @Override
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction, int position) {
-        //call to presenter mthod to handle swipe to delete
+        //call to presenter method to handle swipe to delete
         medicationListPresenter.handleSwipe(viewHolder, direction, position);
     }
 

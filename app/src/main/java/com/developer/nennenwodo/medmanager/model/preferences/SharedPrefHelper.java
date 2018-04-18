@@ -6,23 +6,18 @@ import android.content.SharedPreferences;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by nennenwodo on 4/16/18.
- */
 
 public class SharedPrefHelper {
 
     private SharedPreferences mSharedPreferences;
-    private Context mContext;
 
     public SharedPrefHelper(Context context){
-        mContext = context;
         mSharedPreferences = context.getSharedPreferences(SharedPrefContract.PREF_MEDMANAGER,
                 Context.MODE_PRIVATE);
     }
 
     /**
-     * Checks if ic_default_profile_image has PREF_INSTALLED the application before
+     * Checks if user has installed the application before
      * @return
      */
     public boolean isNotFirstInstallation(){
@@ -30,7 +25,7 @@ public class SharedPrefHelper {
     }
 
     /**
-     * Checks if a ic_default_profile_image is logged in
+     * Checks if a user is logged in
      * @return
      */
     public boolean isLoggedIn(){
@@ -39,8 +34,8 @@ public class SharedPrefHelper {
 
 
     /**
-     * Sets the value of PREF_INSTALLED to true in shared pref so the app knows that the first installation has occured.
-     * For better ic_default_profile_image experience
+     * Sets the value of installed to true in shared pref so the app knows that the first installation has occurred.
+     * For better user experience
      */
     public void setFirstInstall(){
         SharedPreferences.Editor editor = mSharedPreferences.edit();
@@ -49,7 +44,7 @@ public class SharedPrefHelper {
     }
 
     /**
-     * Gets the ic_default_profile_image ID stored in the shared preference file
+     * Gets the user id stored in the shared preference file
      * @return
      */
     public String getUserID(){
@@ -57,7 +52,7 @@ public class SharedPrefHelper {
     }
 
     /**
-     * Gets the ic_default_profile_image name stored in the shared preference file
+     * Gets the user name stored in the shared preference file
      * @return
      */
     public String getUserName(){
@@ -65,7 +60,7 @@ public class SharedPrefHelper {
     }
 
     /**
-     * Gets the PREF_GENDER stored in the shared preference file
+     * Gets the gender stored in the shared preference file
      * @return
      */
     public String getUserGender(){
@@ -73,7 +68,7 @@ public class SharedPrefHelper {
     }
 
     /**
-     * Gets the ic_default_profile_image's PREF_BIRTHDAY stored in the shared preference file
+     * Gets the user's birthday stored in the shared preference file
      * @return
      */
     public String getUserBirthday(){
@@ -81,7 +76,7 @@ public class SharedPrefHelper {
     }
 
     /**
-     * Checks if the ic_default_profile_image set the notifications preference to true
+     * Checks if the user set the notifications preference to true
      * @return
      */
     public boolean isNotificationOn(){
@@ -97,20 +92,13 @@ public class SharedPrefHelper {
     }
 
     /**
-     * Clears all ic_default_profile_image session data stored in shared preferences
+     * Clears all user session data stored in shared preferences
      */
     public void clearSharedPreferences(){
 
-        //clear ic_default_profile_image session data
+        //clear user session data
         SharedPreferences.Editor editor = mSharedPreferences.edit();
-        editor.remove(SharedPrefContract.PREF_GENDER);
-        editor.remove(SharedPrefContract.PREF_BIRTHDAY);
-        editor.remove(SharedPrefContract.PREF_USER_NAME);
-        editor.remove(SharedPrefContract.PREF_FULL_NAME);
-        editor.remove(SharedPrefContract.PREF_USER_EMAIL);
-        editor.remove(SharedPrefContract.PREF_PROFILE_IMAGE);
-        editor.remove(SharedPrefContract.PREF_USER_ID);
-        editor.putBoolean(SharedPrefContract.PREF_IS_LOGGED_IN, false);
+        editor.clear();
         editor.apply();
 
     }
@@ -145,18 +133,5 @@ public class SharedPrefHelper {
         editor.apply();
     }
 
-    /**
-     * Makes the shared preference file editable
-     */
-    public void initSharedPrefEdit(){
-
-    }
-
-    /**
-     * Saves the new edits made to the shared preference file
-     */
-    public void saveSharedPrefEdits(){
-
-    }
 
 }

@@ -18,14 +18,12 @@ import java.util.HashMap;
 public class SignInPresenter implements SignInContract.Presenter {
 
     private SignInContract.View mView;
-    private Context mContext;
     private SharedPrefHelper mSharedPrefHelper;
 
 
     public SignInPresenter(SignInContract.View view, Context context){
         //init constructor
         mView = view;
-        mContext = context;
         mSharedPrefHelper = new SharedPrefHelper(context);
     }
 

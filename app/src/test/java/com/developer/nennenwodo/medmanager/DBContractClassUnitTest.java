@@ -75,7 +75,7 @@ public class DBContractClassUnitTest {
         int medicationFields = medicationClassDeclaredFields.length;
         int userFields = userClassDeclaredFields.length;
 
-        assertEquals("There should be exactly 10 String members in the inner class", 10, medicationFields);
+        assertEquals("There should be exactly 8 String members in the inner class", 8, medicationFields);
         assertEquals("There should be exactly 6 String members in the inner class", 6, userFields);
 
         for (Field field : medicationClassDeclaredFields) {

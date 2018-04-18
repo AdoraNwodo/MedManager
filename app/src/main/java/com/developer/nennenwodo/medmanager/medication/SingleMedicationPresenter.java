@@ -3,14 +3,11 @@ package com.developer.nennenwodo.medmanager.medication;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 
 import com.developer.nennenwodo.medmanager.model.sqlite.MedicationDBContract;
 import com.developer.nennenwodo.medmanager.model.sqlite.MedicationDBHelper;
 import com.developer.nennenwodo.medmanager.utils.Utility;
 
-import java.util.Calendar;
 import java.util.List;
 
 
@@ -21,7 +18,6 @@ public class SingleMedicationPresenter implements SingleMedicationContract.Prese
 
     private SingleMedicationContract.View mView;
     private Context mContext;
-    private int id;
 
 
     public SingleMedicationPresenter(SingleMedicationContract.View view, Context context){
@@ -39,7 +35,6 @@ public class SingleMedicationPresenter implements SingleMedicationContract.Prese
 
         cursor.moveToFirst();
 
-        id = cursor.getInt(cursor.getColumnIndex(MedicationDBContract.MedicationEntry._ID));
         String name = cursor.getString(cursor.getColumnIndex(MedicationDBContract.MedicationEntry.NAME));
         String description = cursor.getString(cursor.getColumnIndex(MedicationDBContract.MedicationEntry.DESCRIPTION));
         int interval = cursor.getInt(cursor.getColumnIndex(MedicationDBContract.MedicationEntry.INTERVAL));

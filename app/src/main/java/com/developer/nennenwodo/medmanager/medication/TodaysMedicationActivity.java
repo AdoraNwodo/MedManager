@@ -3,27 +3,18 @@ package com.developer.nennenwodo.medmanager.medication;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.developer.nennenwodo.medmanager.HomeFragment;
 import com.developer.nennenwodo.medmanager.R;
-import com.developer.nennenwodo.medmanager.adapter.MedicationListAdapter;
 import com.developer.nennenwodo.medmanager.adapter.TodaysMedicationListAdapter;
 import com.developer.nennenwodo.medmanager.model.Medication;
 import com.developer.nennenwodo.medmanager.utils.BaseActivity;
-import com.developer.nennenwodo.medmanager.utils.RecyclerItemTouchHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +25,7 @@ public class TodaysMedicationActivity extends BaseActivity implements TodaysMedi
     private List<Medication> medicationList;
     private TodaysMedicationListAdapter mAdapter;
     private TextView noMedsYetTextView;
-    private TodaysMedicationPresenter medicationListPresenter;
+
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -47,7 +38,7 @@ public class TodaysMedicationActivity extends BaseActivity implements TodaysMedi
 
         recyclerView = (RecyclerView) findViewById(R.id.medicationRecyclerView);
         medicationList = new ArrayList<>();
-        mAdapter = new TodaysMedicationListAdapter(TodaysMedicationActivity.this, medicationList);
+        mAdapter = new TodaysMedicationListAdapter(medicationList);
         noMedsYetTextView = (TextView) findViewById(R.id.textview_no_meds_yet);
 
 
@@ -58,7 +49,7 @@ public class TodaysMedicationActivity extends BaseActivity implements TodaysMedi
         recyclerView.setAdapter(mAdapter);
 
 
-        medicationListPresenter = new TodaysMedicationPresenter(this, TodaysMedicationActivity.this);
+        TodaysMedicationPresenter medicationListPresenter = new TodaysMedicationPresenter(this, TodaysMedicationActivity.this);
         medicationListPresenter.prepareMedications();
 
         serveViews();

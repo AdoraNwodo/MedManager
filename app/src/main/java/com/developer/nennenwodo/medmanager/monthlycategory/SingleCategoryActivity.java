@@ -114,18 +114,18 @@ public class SingleCategoryActivity extends BaseActivity implements RecyclerItem
 
     /**
      * Adds new medication to list
-     * @param id
-     * @param userID
-     * @param name
-     * @param description
-     * @param frequencyOrInterval
-     * @param startDate
-     * @param startTime
-     * @param endDate
+     * @param id medication identifier
+     * @param userId id of user who medication belongs to
+     * @param name name of the medication
+     * @param description description of the medication
+     * @param startDate date the medication starts
+     * @param startTime time the medication starts
+     * @param endDate date the medication ends
+     * @param frequencyOrInterval number of times a day the medication is to be taken
      */
     @Override
-    public void addToList(int id, String userID, String name, String description, int frequencyOrInterval, String startDate, String startTime, String endDate) {
-        medicationList.add(new Medication(id, userID, name, description, frequencyOrInterval, startDate,startTime, endDate));
+    public void addToList(int id, String userId, String name, String description, int frequencyOrInterval, String startDate, String startTime, String endDate) {
+        medicationList.add(new Medication(id, userId, name, description, frequencyOrInterval, startDate,startTime, endDate));
     }
 
     /**

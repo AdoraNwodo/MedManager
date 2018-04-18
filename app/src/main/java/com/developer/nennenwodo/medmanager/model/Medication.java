@@ -6,7 +6,7 @@ package com.developer.nennenwodo.medmanager.model;
  */
 public class Medication {
     private int id, interval;
-    private String name, userID, description, startDate, startTime, endDate, dateCreated, dateUpdated;
+    private String name, userID, description, startDate, startTime, endDate;
 
     public Medication(String userID, String name, String description, int interval, String startDate, String startTime, String endDate) {
         this.userID = userID;
@@ -30,17 +30,6 @@ public class Medication {
         this.endDate = endDate;
     }
 
-    public Medication(int id, String userID, String name, String description, int interval, String startDate, String startTime, String endDate, String dateUpdated) {
-        this.id = id;
-        this.userID = userID;
-        this.name = name;
-        this.description = description;
-        this.interval = interval;
-        this.startDate = startDate;
-        this.startTime = startTime;
-        this.endDate = endDate;
-        this.dateUpdated = dateUpdated;
-    }
 
     public String getUserID() {
         return userID;
@@ -99,22 +88,6 @@ public class Medication {
 
     public void setEndDate(String endDate) {
         this.endDate = endDate;
-    }
-
-    public String getDateCreated() {
-        return dateCreated;
-    }
-
-    public void setDateCreated(String dateCreated) {
-        this.dateCreated = dateCreated;
-    }
-
-    public String getDateUpdated() {
-        return dateUpdated;
-    }
-
-    public void setDateUpdated(String dateUpdated) {
-        this.dateUpdated = dateUpdated;
     }
 
     public String getStartTime() {

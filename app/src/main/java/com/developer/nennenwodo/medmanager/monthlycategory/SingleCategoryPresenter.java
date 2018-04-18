@@ -4,19 +4,15 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.widget.RecyclerView;
 
 import com.developer.nennenwodo.medmanager.AlarmReceiver;
-import com.developer.nennenwodo.medmanager.medication.SingleMedicationActivity;
 import com.developer.nennenwodo.medmanager.model.Medication;
 import com.developer.nennenwodo.medmanager.model.preferences.SharedPrefHelper;
 import com.developer.nennenwodo.medmanager.model.sqlite.MedicationDBContract;
 import com.developer.nennenwodo.medmanager.model.sqlite.MedicationDBHelper;
 import com.developer.nennenwodo.medmanager.adapter.MedicationListAdapter;
-import com.developer.nennenwodo.medmanager.model.preferences.SharedPrefContract;
 
 /**
  * Responsible for handling actions from the view and updating the UI as required
@@ -39,7 +35,7 @@ public class SingleCategoryPresenter implements SingleCategoryContract.Presenter
 
         mView.clearList();  //clear list
 
-        //get logged in ic_default_profile_image using shared preferences
+        //get logged in user using shared preferences
         SharedPrefHelper mSharedPrefHelper = new SharedPrefHelper(mContext);
         String userID = mSharedPrefHelper.getUserID();
 
@@ -100,7 +96,6 @@ public class SingleCategoryPresenter implements SingleCategoryContract.Presenter
      * @param id
      */
     private void cancelAlarm(int id){
-        //Intent intent = new Intent(mContext, SingleMedicationActivity.class);
         Intent intent = new Intent(mContext, AlarmReceiver.class);
         intent.putExtra("MEDICATION_ID", id);
         intent.setAction(""+System.currentTimeMillis());

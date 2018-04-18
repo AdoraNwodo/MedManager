@@ -7,16 +7,12 @@ import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.widget.DatePicker;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 import com.developer.nennenwodo.medmanager.AlarmReceiver;
-import com.developer.nennenwodo.medmanager.model.preferences.SharedPrefContract;
 import com.developer.nennenwodo.medmanager.model.preferences.SharedPrefHelper;
 import com.developer.nennenwodo.medmanager.utils.Utility;
 import com.developer.nennenwodo.medmanager.model.Medication;
@@ -42,14 +38,14 @@ public class NewMedicationPresenter implements NewMedicationContract.Presenter{
 
 
     /**
-     * Performs actions when the ic_add medication button has been clicked
-     * @param context
-     * @param medicationName
-     * @param medicationDescription
-     * @param medicationStartDate
-     * @param medicationStartTime
-     * @param medicationEndDate
-     * @param medicationFrequency
+     * Performs actions when the add medication button has been clicked
+     * @param context activity context
+     * @param medicationName name of the medication
+     * @param medicationDescription description of the medication
+     * @param medicationStartDate date the medication starts
+     * @param medicationStartTime time the medication starts
+     * @param medicationEndDate date the medication ends
+     * @param medicationFrequency number of times a day the medication is to be taken
      */
     @Override
     public void addMedicationClick(Context context, String medicationName, String medicationDescription,
@@ -94,6 +90,7 @@ public class NewMedicationPresenter implements NewMedicationContract.Presenter{
         //close the connection
         medicationDBHelper.close();
 
+        //get the calendar equivalent of start date
         Calendar calStartDate = Calendar.getInstance();
         calStartDate.set(Calendar.YEAR, Utility.getYear(medicationStartDate));
         calStartDate.set(Calendar.MONTH, Utility.getMonth(medicationStartDate));
@@ -101,6 +98,7 @@ public class NewMedicationPresenter implements NewMedicationContract.Presenter{
         calStartDate.set(Calendar.HOUR_OF_DAY, Utility.getHour(medicationStartTime));
         calStartDate.set(Calendar.MINUTE, Utility.getMinute(medicationStartTime));
 
+        //get the calendar equivalent of stop/end date
         Calendar calEndDate = Calendar.getInstance();
         calEndDate.set(Calendar.YEAR, Utility.getYear(medicationEndDate));
         calEndDate.set(Calendar.MONTH, Utility.getMonth(medicationEndDate));
@@ -114,20 +112,16 @@ public class NewMedicationPresenter implements NewMedicationContract.Presenter{
 
         Date now = new Date();
 
+        //Do an iteration at every interval until the first future date. This prevents alarm manager from triggering past alarms
         for(int i = 0; i < numberOfIterations; i++){
 
             Date dateTime = calStartDate.getTime();
             if(dateTime.before(now)){
+                //add hours if calendar is still on past dates
                 calStartDate.add(Calendar.HOUR, 24/medicationFrequencyOrInterval);
             }else{
-                int year = calStartDate.get(Calendar.YEAR);
-                int month = calStartDate.get(Calendar.MONTH) + 1;
-                int day = calStartDate.get(Calendar.DAY_OF_MONTH);
 
-                String formattedStartDate = Utility.formatDate(day,month,year);
-
-                //ic_add alarm
-                //setAlarm(formattedStartDate, medicationEndDate, medicationStartTime, mContext, rowId, medicationFrequencyOrInterval);
+                //on first future date, add alarm and break out of loop
                 setAlarm(calStartDate, mContext, rowId, medicationFrequencyOrInterval);
 
                 break;
@@ -146,14 +140,6 @@ public class NewMedicationPresenter implements NewMedicationContract.Presenter{
      * sets an alarm for the users new medication
      */
     private void setAlarm(Calendar start, Context ctx, long id, int frequency){
-
-        /*Calendar ic_calendar = Calendar.getInstance();
-
-        ic_calendar.set(Calendar.YEAR, Utility.getYear(startDate));
-        ic_calendar.set(Calendar.MONTH, Utility.getMonth(startDate));
-        ic_calendar.set(Calendar.DAY_OF_MONTH, Utility.getDay(startDate));
-        ic_calendar.set(Calendar.HOUR_OF_DAY, Utility.getHour(startTime));
-        ic_calendar.set(Calendar.MINUTE, Utility.getMinute(startTime));*/
 
         Intent intent = new Intent(ctx,AlarmReceiver.class);
         intent.putExtra("MEDICATION_ID", (int)id);
@@ -239,7 +225,7 @@ public class NewMedicationPresenter implements NewMedicationContract.Presenter{
 
         Calendar mCalendar = Calendar.getInstance();
         int year = mCalendar.get(Calendar.YEAR);
-        int month = mCalendar.get(Calendar.MONTH) + 1;
+        int month = mCalendar.get(Calendar.MONTH);
         int day = mCalendar.get(Calendar.DAY_OF_MONTH);
 
         DatePickerDialog endDatePickerDialog = new DatePickerDialog(mContext,

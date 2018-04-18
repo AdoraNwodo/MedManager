@@ -4,7 +4,6 @@ package com.developer.nennenwodo.medmanager.account;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
 
 import com.developer.nennenwodo.medmanager.model.preferences.SharedPrefHelper;

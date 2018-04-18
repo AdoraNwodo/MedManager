@@ -53,7 +53,7 @@ public class PersonalFragment extends Fragment implements View.OnClickListener, 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
-        //inject ic_default_profile_image defined views
+        //inject user defined views
         final RelativeLayout contactMeRelativeLayout = (RelativeLayout) view.findViewById(R.id.relative_layout_contact_me);
         final RelativeLayout faqsRelativeLayout = (RelativeLayout) view.findViewById(R.id.relative_layout_faqs);
         final RelativeLayout profileRelativeLayout = (RelativeLayout) view.findViewById(R.id.relative_layout_profile);
@@ -64,7 +64,7 @@ public class PersonalFragment extends Fragment implements View.OnClickListener, 
         final CircleImageView profilePictureImageView = (CircleImageView) view.findViewById(R.id.image_profile);
         notifyMeSwitch = (SwitchCompat) view.findViewById(R.id.notifyMeSwitch);
 
-        //display ic_default_profile_image data on allocated views
+        //display user data on allocated views
         userNameTextView.setText(account.getDisplayName());
         userEmailTextView.setText(account.getEmail());
         if(account.getPhotoUrl() != null) {
@@ -140,7 +140,7 @@ public class PersonalFragment extends Fragment implements View.OnClickListener, 
 
     @Override
     public void initNotificationSwitch(boolean notifyMe) {
-        //checks ic_notification switch compat based on if ic_default_profile_image has set notify me to true of false
+        //checks notification switch compat based on if user has set notify me to true of false
         if(notifyMe){
             notifyMeSwitch.setChecked(true);
         }else{
@@ -149,7 +149,7 @@ public class PersonalFragment extends Fragment implements View.OnClickListener, 
     }
 
     /**
-     * Listens to check changes and updates ic_notification settings based on users preference
+     * Listens to check changes and updates notification settings based on users preference
      * @param compoundButton
      * @param b
      */
@@ -169,16 +169,6 @@ public class PersonalFragment extends Fragment implements View.OnClickListener, 
     }
 
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);

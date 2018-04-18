@@ -20,7 +20,6 @@ public class PersonalSettingsPresenter implements PersonalSettingsContract.Prese
     private Context mContext;
     private PersonalSettingsContract.View mView;
     private SharedPrefHelper mSharedPreferences;
-    private MedicationDBHelper medicationDBHelper;
 
     public PersonalSettingsPresenter(PersonalSettingsContract.View view, Context context){
         mContext = context;
@@ -68,7 +67,7 @@ public class PersonalSettingsPresenter implements PersonalSettingsContract.Prese
     @Override
     public void toggleNotificationsOnOff(boolean notifyMe) {
 
-        //edit shared preferences - ic_notification status
+        //edit shared preferences - notification status
         mSharedPreferences.putBoolean(SharedPrefContract.PREF_NOTIFICATION_TURNED_ON, notifyMe);
 
         String notificationStatus;
@@ -81,7 +80,7 @@ public class PersonalSettingsPresenter implements PersonalSettingsContract.Prese
 
         String userID = mSharedPreferences.getUserID();
 
-        medicationDBHelper = new MedicationDBHelper(mContext);
+        MedicationDBHelper medicationDBHelper = new MedicationDBHelper(mContext);
 
         //update DB
         medicationDBHelper.updateUserNotification(userID, notificationStatus);
@@ -93,7 +92,7 @@ public class PersonalSettingsPresenter implements PersonalSettingsContract.Prese
 
     @Override
     public void checkUncheckNotificationSwitch() {
-        //checks the sharedpref to see if ic_default_profile_image has set notify to true or false, then updates ui
+        //checks the sharedpref to see if user has set notify to true or false, then updates ui
         boolean notificationStatus = mSharedPreferences.isNotificationOn();
         mView.initNotificationSwitch(notificationStatus);
     }

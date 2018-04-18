@@ -42,6 +42,7 @@ public class ContactActivity extends BaseActivity implements ContactContract.Vie
         githubImageView.setOnClickListener(this);
         linkedinImageView.setOnClickListener(this);
         slackUsernameTextView.setOnClickListener(this);
+
     }
 
     @Override

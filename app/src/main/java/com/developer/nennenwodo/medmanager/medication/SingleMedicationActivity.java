@@ -9,7 +9,6 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -17,11 +16,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.developer.nennenwodo.medmanager.R;
-import com.developer.nennenwodo.medmanager.adapter.MedicationListAdapter;
 import com.developer.nennenwodo.medmanager.adapter.MedicationScheduleListAdapter;
-import com.developer.nennenwodo.medmanager.model.Medication;
 import com.developer.nennenwodo.medmanager.utils.BaseActivity;
-import com.developer.nennenwodo.medmanager.utils.RecyclerItemTouchHelper;
 import com.developer.nennenwodo.medmanager.utils.Utility;
 
 import java.util.ArrayList;
@@ -64,9 +60,9 @@ public class SingleMedicationActivity extends BaseActivity implements SingleMedi
         pastRecyclerView = (RecyclerView) findViewById(R.id.pastRecyclerView);
         upcomingRecyclerView = (RecyclerView) findViewById(R.id.upcomingRecyclerView);
 
-        mAdapter = new MedicationScheduleListAdapter(SingleMedicationActivity.this, medicationList);
-        mPastAdapter = new MedicationScheduleListAdapter(SingleMedicationActivity.this, pastList);
-        mUpcomingAdapter = new MedicationScheduleListAdapter(SingleMedicationActivity.this, upcomingList);
+        mAdapter = new MedicationScheduleListAdapter(medicationList);
+        mPastAdapter = new MedicationScheduleListAdapter(pastList);
+        mUpcomingAdapter = new MedicationScheduleListAdapter(upcomingList);
 
 
         //Initialise recycler view and its properties

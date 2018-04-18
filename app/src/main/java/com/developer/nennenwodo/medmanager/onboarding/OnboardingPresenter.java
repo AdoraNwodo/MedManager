@@ -1,9 +1,7 @@
 package com.developer.nennenwodo.medmanager.onboarding;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 
-import com.developer.nennenwodo.medmanager.model.preferences.SharedPrefContract;
 import com.developer.nennenwodo.medmanager.model.preferences.SharedPrefHelper;
 
 /**
@@ -12,25 +10,23 @@ import com.developer.nennenwodo.medmanager.model.preferences.SharedPrefHelper;
 public class OnboardingPresenter implements OnboardingContract.Presenter {
 
     private OnboardingContract.View mView;
-    private Context mContext;
     private SharedPrefHelper mSharedPrefHelper;
 
     public OnboardingPresenter(OnboardingContract.View view, Context context){
         mView = view;
-        mContext = context;
         mSharedPrefHelper = new SharedPrefHelper(context);
     }
 
     /**
-     * Checks if app has been PREF_INSTALLED prior to now using shared preferences.
+     * Checks if app has been installed prior to now using shared preferences.
      * If this is the first installation, onboarding screen is displayed.
-     * If not, the page is not displayed and the ic_default_profile_image sees the next visible page on med manager
+     * If not, the page is not displayed and the user sees the next visible page on med manager
      */
     @Override
     public void checkInstall() {
 
         if(mSharedPrefHelper.isNotFirstInstallation()){
-            //ic_default_profile_image has logged in before
+            //user has logged in before
             mView.goToLogin();
             mView.setFullScreen();
 

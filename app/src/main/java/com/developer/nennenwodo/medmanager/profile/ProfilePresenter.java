@@ -32,7 +32,7 @@ public class ProfilePresenter implements ProfileContract.Presenter {
     }
 
     /**
-     * Fetch ic_default_profile_image profile details from shared preferences and display
+     * Fetch user profile details from shared preferences and display
      */
     @Override
     public void fetchSharedPreferences() {
@@ -77,7 +77,7 @@ public class ProfilePresenter implements ProfileContract.Presenter {
         mHashMap.put(SharedPrefContract.PREF_BIRTHDAY, birthday);
         mHashMap.put(SharedPrefContract.PREF_GENDER, gender);
 
-        //ic_add to shared preferences
+        //add to shared preferences
         mSharedPrefHelper.putStrings(mHashMap);
 
         mView.displayProfileUpdatedMessage();

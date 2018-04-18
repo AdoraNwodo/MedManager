@@ -2,7 +2,6 @@ package com.developer.nennenwodo.medmanager.adapter;
 
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +15,6 @@ import com.developer.nennenwodo.medmanager.utils.Utility;
 import java.util.List;
 
 public class TodaysMedicationListAdapter extends RecyclerView.Adapter<TodaysMedicationListAdapter.MyViewHolder> {
-    private Context context;
     private List<Medication> medicationList;
 
 
@@ -63,8 +61,7 @@ public class TodaysMedicationListAdapter extends RecyclerView.Adapter<TodaysMedi
     }
 
 
-    public TodaysMedicationListAdapter(Context context, List<Medication> medicationList) {
-        this.context = context;
+    public TodaysMedicationListAdapter(List<Medication> medicationList) {
         this.medicationList = medicationList;
     }
 

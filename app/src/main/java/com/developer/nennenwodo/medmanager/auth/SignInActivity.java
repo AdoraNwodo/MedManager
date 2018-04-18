@@ -27,8 +27,8 @@ import com.google.android.gms.tasks.Task;
  */
 public class SignInActivity extends BaseActivity implements GoogleApiClient.OnConnectionFailedListener, SignInContract.View, View.OnClickListener{
 
-    private SignInPresenter mSignInPresenter;
     private static final int REQUEST_CODE = 1002;
+    private SignInPresenter mSignInPresenter;
     private GoogleSignInClient mGoogleSignInClient;
 
 
@@ -47,7 +47,9 @@ public class SignInActivity extends BaseActivity implements GoogleApiClient.OnCo
         final SignInButton signIn = (SignInButton) findViewById(R.id.btnLogin);
 
         //Configure sign-in to request the ic_default_profile_image's ID, email address, and basic profile
-        GoogleSignInOptions signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        GoogleSignInOptions signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, signInOptions);
 
@@ -82,7 +84,7 @@ public class SignInActivity extends BaseActivity implements GoogleApiClient.OnCo
 
 
     /**
-     * Shows the ic_default_profile_image the appropriate screen depending on the login action
+     * Shows the user the appropriate screen depending on the login action
      * @param loggedIn
      */
     @Override

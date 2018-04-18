@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import com.developer.nennenwodo.medmanager.model.Medication;
 import com.developer.nennenwodo.medmanager.model.User;
@@ -32,9 +31,7 @@ public class MedicationDBHelper extends SQLiteOpenHelper {
             MedicationDBContract.MedicationEntry.INTERVAL + " INTEGER NOT NULL, " +
             MedicationDBContract.MedicationEntry.START_DATE + " TEXT NOT NULL, " +
             MedicationDBContract.MedicationEntry.START_TIME + " TEXT NOT NULL, " +
-            MedicationDBContract.MedicationEntry.END_DATE + " TEXT NOT NULL, " +
-            MedicationDBContract.MedicationEntry.DATE_CREATED + " TIMESTAMP DEFAULT CURRENT_TIMESTAMP, " +
-            MedicationDBContract.MedicationEntry.DATE_UPDATED + " TIMESTAMP DEFAULT CURRENT_TIMESTAMP " +
+            MedicationDBContract.MedicationEntry.END_DATE + " TEXT NOT NULL " +
             ");";
 
     private static final String SQL_CREATE_USER_INFORMATION_TABLE = "CREATE TABLE " +

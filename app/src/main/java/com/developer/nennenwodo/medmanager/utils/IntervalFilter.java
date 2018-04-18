@@ -1,12 +1,11 @@
 package com.developer.nennenwodo.medmanager.utils;
 
-
 import android.text.InputFilter;
 import android.text.Spanned;
 
 
 /**
- * Validates input. Makes sure input is in a specific range
+ * Validates input. Makes sure input is in a specific range and can produce equal daily interval
  */
 public class IntervalFilter implements InputFilter {
 
@@ -23,9 +22,10 @@ public class IntervalFilter implements InputFilter {
     public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
         try {
             int input = Integer.parseInt(dest.toString() + source.toString());
-            if (isInRange(min, max, input) && canProduceEqualDailyInterval(input))
-                return null;
-        } catch (NumberFormatException nfe) { }
+            if (isInRange(min, max, input) && canProduceEqualDailyInterval(input)) return null;
+        } catch (NumberFormatException nfe) {
+            nfe.printStackTrace();
+        }
         return "";
     }
 

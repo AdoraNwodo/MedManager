@@ -31,10 +31,6 @@ public class MedicationDBContract {
 
         public static final String END_DATE = "medication_end_date";
 
-        public static final String DATE_CREATED = "medication_created_at";
-
-        public static final String DATE_UPDATED = "medication_updated_at";
-
     }
 
     /**

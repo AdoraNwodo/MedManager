@@ -1,18 +1,12 @@
 package com.developer.nennenwodo.medmanager.utils;
 
-import android.util.Log;
-
-
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.ZoneOffset;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
-import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
 
@@ -206,7 +200,7 @@ public class Utility {
     }
 
     /**
-     * Gets the number of days between two ic_calendar dates
+     * Gets the number of days between two calendar dates
      * @param startDate
      * @param endDate
      * @return
@@ -236,7 +230,7 @@ public class Utility {
 
 
     /**
-     * Gets the number of days between two ic_calendar dates
+     * Gets the number of days between two calendar dates
      * @param startDate
      * @param endDate
      * @return
@@ -278,7 +272,7 @@ public class Utility {
 
 
     /**
-     * Gets the all the dates and times the ic_default_profile_image would take the medication for
+     * Gets the all the dates and times the user would take the medication for
      * @param startDate
      * @param startTime
      * @param endDate
@@ -292,7 +286,7 @@ public class Utility {
         List<String> pastScheduleList = new ArrayList<>();
         List<String> upcomingScheduleList = new ArrayList<>();
 
-
+        //init calendar start date
         Calendar calStartDate = Calendar.getInstance();
         calStartDate.set(Calendar.YEAR, Utility.getYear(startDate));
         calStartDate.set(Calendar.MONTH, Utility.getMonth(startDate));
@@ -300,6 +294,7 @@ public class Utility {
         calStartDate.set(Calendar.HOUR_OF_DAY, Utility.getHour(startTime));
         calStartDate.set(Calendar.MINUTE, Utility.getMinute(startTime));
 
+        //init calendar end date
         Calendar calEndDate = Calendar.getInstance();
         calEndDate.set(Calendar.YEAR, Utility.getYear(endDate));
         calEndDate.set(Calendar.MONTH, Utility.getMonth(endDate));
@@ -313,6 +308,7 @@ public class Utility {
 
         Date today = new Date();
 
+        //loop and add specific time for medication into the past, today (present) and upcoming (future) list
         for(int i = 0; i < numberOfIterations; i++){
 
             Date dateTime = calStartDate.getTime();
@@ -334,6 +330,12 @@ public class Utility {
 
     }
 
+    /**
+     * Checks if two dates are on the same day
+     * @param date1
+     * @param date2
+     * @return true if the dates are on the same day and false otherwise
+     */
     private static boolean isSameDay(Date date1, Date date2){
         Calendar cal1 = Calendar.getInstance();
         Calendar cal2 = Calendar.getInstance();

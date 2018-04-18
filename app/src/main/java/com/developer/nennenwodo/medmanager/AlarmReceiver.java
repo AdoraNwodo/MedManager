@@ -73,13 +73,13 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         }else {
 
-            //check if ic_default_profile_image set notify me to true or false. display ic_notification if set to true, else do nothing.
+            //check if user set notify me to true or false. display ic_notification if set to true, else do nothing.
 
             SharedPrefHelper sharedPrefHelper = new SharedPrefHelper(context);
 
             if(sharedPrefHelper.isNotificationOn()) {
 
-                //display ic_notification if end day hasn't passed
+                //display notification if end day hasn't passed
                 Intent myIntent = new Intent(context, SingleMedicationActivity.class);
                 myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 myIntent.putExtra("MEDICATION_ID", id);

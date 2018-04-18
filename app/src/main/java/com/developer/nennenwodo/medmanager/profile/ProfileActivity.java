@@ -16,8 +16,6 @@ import com.developer.nennenwodo.medmanager.R;
 import com.developer.nennenwodo.medmanager.utils.BaseActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 
-import java.util.Calendar;
-
 import de.hdodenhof.circleimageview.CircleImageView;
 
 import static com.google.android.gms.auth.api.signin.GoogleSignIn.getLastSignedInAccount;
