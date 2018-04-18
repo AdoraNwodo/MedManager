@@ -1,9 +1,6 @@
 package com.developer.nennenwodo.medmanager.auth;
 
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteDatabase;
-import android.util.Pair;
 
 
 import com.developer.nennenwodo.medmanager.model.preferences.SharedPrefContract;
@@ -33,7 +30,7 @@ public class SignInPresenter implements SignInContract.Presenter {
     }
 
     /**
-     * Checks the user session (shared preferences) to see if a user already logged in
+     * Checks the ic_default_profile_image session (shared preferences) to see if a ic_default_profile_image already logged in
      */
     @Override
     public void checkIfLoggedIn() {
@@ -46,30 +43,30 @@ public class SignInPresenter implements SignInContract.Presenter {
     }
 
     /**
-     * Checks if google account has been used to sign in on the app before,
-     * If this is the case, it fetches the existing account.
-     * If this is not the case, a new account entry is made on med manager.
+     * Checks if google ic_account has been used to sign in on the app before,
+     * If this is the case, it fetches the existing ic_account.
+     * If this is not the case, a new ic_account entry is made on med manager.
      * @param account
      * @param mContext
      */
     @Override
     public void handleSignInResult(GoogleSignInAccount account, Context mContext) {
 
-        //add user to db or get corresponding user
+        //ic_add ic_default_profile_image to db or get corresponding ic_default_profile_image
         MedicationDBHelper medicationDBHelper = new MedicationDBHelper(mContext);
 
-        //get the user with ID in DB or add user if record does not exist in DB
+        //get the ic_default_profile_image with ID in DB or ic_add ic_default_profile_image if record does not exist in DB
         User user = medicationDBHelper.addOrReturnUser(new User(account.getId(), "", "", "", "on"));
 
         //close the connection
         medicationDBHelper.close();
 
         HashMap<String,String> mHashMap = new HashMap<>();
-        mHashMap.put(SharedPrefContract.fullName, account.getDisplayName());
-        mHashMap.put(SharedPrefContract.userEmail, account.getEmail());
-        mHashMap.put(SharedPrefContract.userID,account.getId());
+        mHashMap.put(SharedPrefContract.PREF_FULL_NAME, account.getDisplayName());
+        mHashMap.put(SharedPrefContract.PREF_USER_EMAIL, account.getEmail());
+        mHashMap.put(SharedPrefContract.PREF_USER_ID,account.getId());
         if(account.getPhotoUrl() != null) {
-            mHashMap.put(SharedPrefContract.profileImageURL, account.getPhotoUrl().toString());
+            mHashMap.put(SharedPrefContract.PREF_PROFILE_IMAGE, account.getPhotoUrl().toString());
         }
 
 
@@ -77,21 +74,21 @@ public class SignInPresenter implements SignInContract.Presenter {
 
         if(user != null){
 
-            //user already exists
-            mHashMap.put(SharedPrefContract.userName, user.getUserName());
-            mHashMap.put(SharedPrefContract.birthday, user.getBirthday());
-            mHashMap.put(SharedPrefContract.gender, user.getGender());
+            //ic_default_profile_image already exists
+            mHashMap.put(SharedPrefContract.PREF_USER_NAME, user.getUserName());
+            mHashMap.put(SharedPrefContract.PREF_BIRTHDAY, user.getBirthday());
+            mHashMap.put(SharedPrefContract.PREF_GENDER, user.getGender());
             if(user.getNotificationStatus().equalsIgnoreCase("on")){
-                mSharedPrefHelper.putBoolean(SharedPrefContract.notifications_on, true);
+                mSharedPrefHelper.putBoolean(SharedPrefContract.PREF_NOTIFICATION_TURNED_ON, true);
             }else{
-                mSharedPrefHelper.putBoolean(SharedPrefContract.notifications_on, false);
+                mSharedPrefHelper.putBoolean(SharedPrefContract.PREF_NOTIFICATION_TURNED_ON, false);
             }
 
         }
 
-        //add to shared preferences
+        //ic_add to shared preferences
         mSharedPrefHelper.putStrings(mHashMap);
-        mSharedPrefHelper.putBoolean(SharedPrefContract.isLoggedIn, true);
+        mSharedPrefHelper.putBoolean(SharedPrefContract.PREF_IS_LOGGED_IN, true);
 
         mView.updateUI(true);
 

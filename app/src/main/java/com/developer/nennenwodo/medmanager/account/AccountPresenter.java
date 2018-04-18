@@ -33,7 +33,7 @@ public class AccountPresenter implements AccountContract.Presenter {
     }
 
     /**
-     * Signs out the user. User can sign back in and continue using the app normally
+     * Signs out the ic_default_profile_image. User can sign back in and continue using the app normally
      * @param mGoogleSignInClient
      */
     @SuppressLint("RestrictedApi")
@@ -45,7 +45,7 @@ public class AccountPresenter implements AccountContract.Presenter {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
 
-                        //sign out - clear user shared preferences and go back to login activity
+                        //sign out - clear ic_default_profile_image shared preferences and go back to login activity
                         mSharedPrefHelper.clearSharedPreferences();
                         mView.backToLoginPage();
 
@@ -54,7 +54,7 @@ public class AccountPresenter implements AccountContract.Presenter {
     }
 
     /**
-     * Deletes the users account and all medications belonging to that particular user
+     * Deletes the users ic_account and all medications belonging to that particular ic_default_profile_image
      * @param mGoogleSignInClient
      */
     @Override
@@ -65,7 +65,6 @@ public class AccountPresenter implements AccountContract.Presenter {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
 
-
                         MedicationDBHelper medicationDBHelper = new MedicationDBHelper(mContext);
 
                         String userId = mSharedPrefHelper.getUserID();
@@ -73,7 +72,7 @@ public class AccountPresenter implements AccountContract.Presenter {
                         medicationDBHelper.deleteAllUsersMedications(userId);
                         medicationDBHelper.deleteUsersAccount(userId);
 
-                        //clear user shared preferences and go back to login activity
+                        //clear ic_default_profile_image shared preferences and go back to login activity
                         mSharedPrefHelper.clearSharedPreferences();
                         mView.backToLoginPage();
 

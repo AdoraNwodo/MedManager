@@ -206,7 +206,7 @@ public class Utility {
     }
 
     /**
-     * Gets the number of days between two calendar dates
+     * Gets the number of days between two ic_calendar dates
      * @param startDate
      * @param endDate
      * @return
@@ -236,7 +236,7 @@ public class Utility {
 
 
     /**
-     * Gets the number of days between two calendar dates
+     * Gets the number of days between two ic_calendar dates
      * @param startDate
      * @param endDate
      * @return
@@ -278,7 +278,7 @@ public class Utility {
 
 
     /**
-     * Gets the all the dates and times the user would take the medication for
+     * Gets the all the dates and times the ic_default_profile_image would take the medication for
      * @param startDate
      * @param startTime
      * @param endDate

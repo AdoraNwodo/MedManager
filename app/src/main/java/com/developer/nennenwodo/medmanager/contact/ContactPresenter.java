@@ -31,7 +31,7 @@ public class ContactPresenter implements ContactContract.Presenter{
 
     @Override
     public void sendEmail() {
-        //attempt to send email and print error message if user does not have a mail app
+        //attempt to send email and print error message if ic_default_profile_image does not have a mail app
         try
         {
             Intent intent = new Intent (Intent.ACTION_VIEW , Uri.parse(mContext.getString(R.string.email_address)));

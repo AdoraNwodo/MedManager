@@ -23,7 +23,7 @@
                 android:id="@+id/searchView"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@drawable/search_view_bg"
+                android:background="@drawable/bg_search_view"
                 app:queryHint="@string/search"
                 app:defaultQueryHint="@string/search"
                 android:layout_margin="@dimen/activity_vertical_margin"

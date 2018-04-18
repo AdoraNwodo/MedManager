@@ -2,8 +2,6 @@ package com.developer.nennenwodo.medmanager.personalsettings;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteDatabase;
 
 import com.developer.nennenwodo.medmanager.medication.TodaysMedicationActivity;
 import com.developer.nennenwodo.medmanager.model.preferences.SharedPrefContract;
@@ -39,7 +37,7 @@ public class PersonalSettingsPresenter implements PersonalSettingsContract.Prese
 
     @Override
     public void launchFAQActivity() {
-        //goes to faq  page
+        //goes to ic_question_mark  page
         Intent mIntent = new Intent(mContext, FAQActivity.class);
         mContext.startActivity(mIntent);
     }
@@ -53,7 +51,7 @@ public class PersonalSettingsPresenter implements PersonalSettingsContract.Prese
 
     @Override
     public void launchAccountActivity() {
-        //goes to account page
+        //goes to ic_account page
         Intent mIntent = new Intent(mContext, AccountActivity.class);
         mContext.startActivity(mIntent);
     }
@@ -70,8 +68,8 @@ public class PersonalSettingsPresenter implements PersonalSettingsContract.Prese
     @Override
     public void toggleNotificationsOnOff(boolean notifyMe) {
 
-        //edit shared preferences - notification status
-        mSharedPreferences.putBoolean(SharedPrefContract.notifications_on, notifyMe);
+        //edit shared preferences - ic_notification status
+        mSharedPreferences.putBoolean(SharedPrefContract.PREF_NOTIFICATION_TURNED_ON, notifyMe);
 
         String notificationStatus;
 
@@ -95,7 +93,7 @@ public class PersonalSettingsPresenter implements PersonalSettingsContract.Prese
 
     @Override
     public void checkUncheckNotificationSwitch() {
-        //checks the sharedpref to see if user has set notify to true or false, then updates ui
+        //checks the sharedpref to see if ic_default_profile_image has set notify to true or false, then updates ui
         boolean notificationStatus = mSharedPreferences.isNotificationOn();
         mView.initNotificationSwitch(notificationStatus);
     }

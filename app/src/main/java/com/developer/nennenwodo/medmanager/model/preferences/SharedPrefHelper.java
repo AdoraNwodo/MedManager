@@ -2,7 +2,6 @@ package com.developer.nennenwodo.medmanager.model.preferences;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.util.Pair;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,75 +17,75 @@ public class SharedPrefHelper {
 
     public SharedPrefHelper(Context context){
         mContext = context;
-        mSharedPreferences = context.getSharedPreferences(SharedPrefContract.userPreference,
+        mSharedPreferences = context.getSharedPreferences(SharedPrefContract.PREF_MEDMANAGER,
                 Context.MODE_PRIVATE);
     }
 
     /**
-     * Checks if user has installed the application before
+     * Checks if ic_default_profile_image has PREF_INSTALLED the application before
      * @return
      */
     public boolean isNotFirstInstallation(){
-        return mSharedPreferences.contains(SharedPrefContract.installed) && mSharedPreferences.getBoolean(SharedPrefContract.installed, false);
+        return mSharedPreferences.contains(SharedPrefContract.PREF_INSTALLED) && mSharedPreferences.getBoolean(SharedPrefContract.PREF_INSTALLED, false);
     }
 
     /**
-     * Checks if a user is logged in
+     * Checks if a ic_default_profile_image is logged in
      * @return
      */
     public boolean isLoggedIn(){
-        return mSharedPreferences.contains(SharedPrefContract.isLoggedIn) && mSharedPreferences.getBoolean(SharedPrefContract.isLoggedIn, true);
+        return mSharedPreferences.contains(SharedPrefContract.PREF_IS_LOGGED_IN) && mSharedPreferences.getBoolean(SharedPrefContract.PREF_IS_LOGGED_IN, true);
     }
 
 
     /**
-     * Sets the value of installed to true in shared pref so the app knows that the first installation has occured.
-     * For better user experience
+     * Sets the value of PREF_INSTALLED to true in shared pref so the app knows that the first installation has occured.
+     * For better ic_default_profile_image experience
      */
     public void setFirstInstall(){
         SharedPreferences.Editor editor = mSharedPreferences.edit();
-        editor.putBoolean(SharedPrefContract.installed, true);
+        editor.putBoolean(SharedPrefContract.PREF_INSTALLED, true);
         editor.apply();
     }
 
     /**
-     * Gets the user ID stored in the shared preference file
+     * Gets the ic_default_profile_image ID stored in the shared preference file
      * @return
      */
     public String getUserID(){
-        return mSharedPreferences.getString(SharedPrefContract.userID, null);
+        return mSharedPreferences.getString(SharedPrefContract.PREF_USER_ID, null);
     }
 
     /**
-     * Gets the user name stored in the shared preference file
+     * Gets the ic_default_profile_image name stored in the shared preference file
      * @return
      */
     public String getUserName(){
-        return mSharedPreferences.getString(SharedPrefContract.userName, null);
+        return mSharedPreferences.getString(SharedPrefContract.PREF_USER_NAME, null);
     }
 
     /**
-     * Gets the gender stored in the shared preference file
+     * Gets the PREF_GENDER stored in the shared preference file
      * @return
      */
     public String getUserGender(){
-        return mSharedPreferences.getString(SharedPrefContract.gender, null);
+        return mSharedPreferences.getString(SharedPrefContract.PREF_GENDER, null);
     }
 
     /**
-     * Gets the user's birthday stored in the shared preference file
+     * Gets the ic_default_profile_image's PREF_BIRTHDAY stored in the shared preference file
      * @return
      */
     public String getUserBirthday(){
-        return mSharedPreferences.getString(SharedPrefContract.birthday, null);
+        return mSharedPreferences.getString(SharedPrefContract.PREF_BIRTHDAY, null);
     }
 
     /**
-     * Checks if the user set the notifications preference to true
+     * Checks if the ic_default_profile_image set the notifications preference to true
      * @return
      */
     public boolean isNotificationOn(){
-        return mSharedPreferences.getBoolean(SharedPrefContract.notifications_on, true);
+        return mSharedPreferences.getBoolean(SharedPrefContract.PREF_NOTIFICATION_TURNED_ON, true);
     }
 
     /**
@@ -98,20 +97,20 @@ public class SharedPrefHelper {
     }
 
     /**
-     * Clears all user session data stored in shared preferences
+     * Clears all ic_default_profile_image session data stored in shared preferences
      */
     public void clearSharedPreferences(){
 
-        //clear user session data
+        //clear ic_default_profile_image session data
         SharedPreferences.Editor editor = mSharedPreferences.edit();
-        editor.remove(SharedPrefContract.gender);
-        editor.remove(SharedPrefContract.birthday);
-        editor.remove(SharedPrefContract.userName);
-        editor.remove(SharedPrefContract.fullName);
-        editor.remove(SharedPrefContract.userEmail);
-        editor.remove(SharedPrefContract.profileImageURL);
-        editor.remove(SharedPrefContract.userID);
-        editor.putBoolean(SharedPrefContract.isLoggedIn, false);
+        editor.remove(SharedPrefContract.PREF_GENDER);
+        editor.remove(SharedPrefContract.PREF_BIRTHDAY);
+        editor.remove(SharedPrefContract.PREF_USER_NAME);
+        editor.remove(SharedPrefContract.PREF_FULL_NAME);
+        editor.remove(SharedPrefContract.PREF_USER_EMAIL);
+        editor.remove(SharedPrefContract.PREF_PROFILE_IMAGE);
+        editor.remove(SharedPrefContract.PREF_USER_ID);
+        editor.putBoolean(SharedPrefContract.PREF_IS_LOGGED_IN, false);
         editor.apply();
 
     }

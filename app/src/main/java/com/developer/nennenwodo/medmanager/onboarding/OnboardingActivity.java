@@ -37,12 +37,12 @@ public class OnboardingActivity extends BaseActivity implements OnboardingContra
         //init presenter
         mOnboardingPresenter = new OnboardingPresenter(this, OnboardingActivity.this);
 
-        //check if user has installed app and leave page if app has been installed prior to now
+        //check if ic_default_profile_image has PREF_INSTALLED app and leave page if app has been PREF_INSTALLED prior to now
         mOnboardingPresenter.checkInstall();
 
         setContentView(R.layout.activity_onboarding);
 
-        //inject user defined views
+        //inject ic_default_profile_image defined views
         viewPager = (ViewPager)findViewById(R.id.onboardingViewPager);
         dotsLayout = (LinearLayout)findViewById(R.id.onboardingLayoutDots);
         skip = (Button)findViewById(R.id.onboardingSkipButton);

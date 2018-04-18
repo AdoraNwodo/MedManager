@@ -20,7 +20,7 @@
         android:id="@+id/relative_layout_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/settings_list_item_background"
+        android:background="@drawable/bg_settings_list_item"
         android:clickable="true"
         android:focusable="true"
         android:padding="@dimen/activity_horizontal_margin">
@@ -59,7 +59,7 @@
         android:id="@+id/relative_layout_delete_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/settings_list_item_background"
+        android:background="@drawable/bg_settings_list_item"
         android:clickable="true"
         android:focusable="true"
         android:padding="@dimen/activity_horizontal_margin">

@@ -39,7 +39,7 @@ public class SingleCategoryPresenter implements SingleCategoryContract.Presenter
 
         mView.clearList();  //clear list
 
-        //get logged in user using shared preferences
+        //get logged in ic_default_profile_image using shared preferences
         SharedPrefHelper mSharedPrefHelper = new SharedPrefHelper(mContext);
         String userID = mSharedPrefHelper.getUserID();
 

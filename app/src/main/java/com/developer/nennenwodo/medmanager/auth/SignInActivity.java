@@ -46,7 +46,7 @@ public class SignInActivity extends BaseActivity implements GoogleApiClient.OnCo
 
         final SignInButton signIn = (SignInButton) findViewById(R.id.btnLogin);
 
-        //Configure sign-in to request the user's ID, email address, and basic profile
+        //Configure sign-in to request the ic_default_profile_image's ID, email address, and basic profile
         GoogleSignInOptions signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, signInOptions);
@@ -82,7 +82,7 @@ public class SignInActivity extends BaseActivity implements GoogleApiClient.OnCo
 
 
     /**
-     * Shows the user the appropriate screen depending on the login action
+     * Shows the ic_default_profile_image the appropriate screen depending on the login action
      * @param loggedIn
      */
     @Override

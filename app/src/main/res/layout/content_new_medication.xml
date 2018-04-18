@@ -246,7 +246,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginTop="@dimen/form_input_padding"
-                android:background="@drawable/button_gradient"
+                android:background="@drawable/btn_gradient"
                 android:textColor="@android:color/white"
                 android:text="@string/add"
                 android:textSize="18sp"

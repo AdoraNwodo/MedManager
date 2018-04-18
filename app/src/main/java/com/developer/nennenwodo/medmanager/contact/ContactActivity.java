@@ -77,7 +77,7 @@ public class ContactActivity extends BaseActivity implements ContactContract.Vie
                 mContactPresenter.loadWebPage("http://github.com/NenneAdora");
                 break;
             case R.id.image_view_linkedin:
-                mContactPresenter.loadWebPage("https://ng.linkedin.com/in/nenne-nwodo-a73b0710a");
+                mContactPresenter.loadWebPage("https://ng.ic_linkedin.com/in/nenne-nwodo-a73b0710a");
                 break;
             case R.id.textview_slack_name:
                 mContactPresenter.loadWebPage("https://slack.com");
@@ -97,6 +97,6 @@ public class ContactActivity extends BaseActivity implements ContactContract.Vie
 
     @Override
     public void displayNoWhatsappMessage() {
-        Toast.makeText(ContactActivity.this, "Sorry! You don't have Whatsapp installed.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(ContactActivity.this, "Sorry! You don't have Whatsapp PREF_INSTALLED.", Toast.LENGTH_SHORT).show();
     }
 }

@@ -31,12 +31,12 @@ public class MonthlyCategoryPresenter implements MonthlyCategoryContract.Present
 
         mView.clearList(); //clear list to avoid duplicates
 
-        //get id of authenticated user from session using shared preferences
+        //get id of authenticated ic_default_profile_image from session using shared preferences
         SharedPrefHelper mSharedPrefHelper = new SharedPrefHelper(mContext);
         String userID = mSharedPrefHelper.getUserID();
 
 
-        //get all users medications and add to list that would be displayed in recycler view
+        //get all users medications and ic_add to list that would be displayed in recycler view
         MedicationDBHelper medicationDBHelper = new MedicationDBHelper(mContext);
 
         Cursor cursor = medicationDBHelper.readCategories(userID);

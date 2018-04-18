@@ -45,7 +45,7 @@
                 android:clickable="true"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/telephone"/>
+                android:src="@drawable/ic_telephone"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
                 android:id="@+id/image_view_envelop"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/envelope_circle"/>
+                android:src="@drawable/ic_envelope_circle"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -93,7 +93,7 @@
                 android:id="@+id/image_view_github"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/www"/>
+                android:src="@drawable/ic_website"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -116,7 +116,7 @@
                 android:id="@+id/image_view_linkedin"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/linkedin"/>
+                android:src="@drawable/ic_linkedin"/>
 
             <TextView
                 android:layout_width="wrap_content"

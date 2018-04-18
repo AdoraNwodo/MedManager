@@ -42,7 +42,7 @@ public class ProfileActivity extends BaseActivity implements ProfileContract.Vie
 
         mProfilePresenter = new ProfilePresenter(this, ProfileActivity.this);
 
-        //use account instead of shared preferences because users could have updated their details on gmail
+        //use ic_account instead of shared preferences because users could have updated their details on gmail
         @SuppressLint("RestrictedApi") GoogleSignInAccount account = getLastSignedInAccount(ProfileActivity.this);
 
         injectViews();

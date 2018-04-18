@@ -33,7 +33,7 @@ public class TodaysMedicationPresenter implements TodaysMedicationContract.Prese
 
         mView.clearMedicationsList();   //clear list to avoid duplicates
 
-        //get id of authenticated user from session using shared preferences
+        //get id of authenticated ic_default_profile_image from session using shared preferences
         SharedPrefHelper mSharedPrefHelper = new SharedPrefHelper(mContext);
         String userID = mSharedPrefHelper.getUserID();
 

@@ -58,7 +58,7 @@ public class NewMedicationActivity extends BaseActivity implements AdapterView.O
     }
 
     /**
-     * Helper method to inject all user defined views
+     * Helper method to inject all ic_default_profile_image defined views
      */
     private void injectViews(){
 
@@ -143,7 +143,7 @@ public class NewMedicationActivity extends BaseActivity implements AdapterView.O
             String medicationEndDate = mEditTextEndDate.getText().toString().trim();
             String medicationFrequency = mEditTextFrequencyOrInterval.getText().toString();
 
-            //call to presenter method to add medication
+            //call to presenter method to ic_add medication
             mNewMedicationPresenter.addMedicationClick(NewMedicationActivity.this, medicationName, medicationDescription,
                     medicationStartDate, medicationStartTime, medicationEndDate, medicationFrequency
             );

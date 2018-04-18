@@ -62,7 +62,7 @@ public class AccountActivity extends BaseActivity implements AccountContract.Vie
         deleteAccountRelativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //delete account action
+                //delete ic_account action
                 mAccountPresenter.revokeAccess(mGoogleSignInClient);
             }
         });

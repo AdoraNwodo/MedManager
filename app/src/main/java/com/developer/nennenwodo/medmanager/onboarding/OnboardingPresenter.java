@@ -22,15 +22,15 @@ public class OnboardingPresenter implements OnboardingContract.Presenter {
     }
 
     /**
-     * Checks if app has been installed prior to now using shared preferences.
+     * Checks if app has been PREF_INSTALLED prior to now using shared preferences.
      * If this is the first installation, onboarding screen is displayed.
-     * If not, the page is not displayed and the user sees the next visible page on med manager
+     * If not, the page is not displayed and the ic_default_profile_image sees the next visible page on med manager
      */
     @Override
     public void checkInstall() {
 
         if(mSharedPrefHelper.isNotFirstInstallation()){
-            //user has logged in before
+            //ic_default_profile_image has logged in before
             mView.goToLogin();
             mView.setFullScreen();
 

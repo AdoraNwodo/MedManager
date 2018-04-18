@@ -3,8 +3,6 @@ package com.developer.nennenwodo.medmanager.profile;
 
 import android.app.DatePickerDialog;
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.widget.DatePicker;
@@ -34,19 +32,19 @@ public class ProfilePresenter implements ProfileContract.Presenter {
     }
 
     /**
-     * Fetch user profile details from shared preferences and display
+     * Fetch ic_default_profile_image profile details from shared preferences and display
      */
     @Override
     public void fetchSharedPreferences() {
 
-        if (mSharedPrefHelper.isContainedInSharedPreference(SharedPrefContract.userName)) {
+        if (mSharedPrefHelper.isContainedInSharedPreference(SharedPrefContract.PREF_USER_NAME)) {
             mView.displayUsername(mSharedPrefHelper.getUserName());
         }
-        if (mSharedPrefHelper.isContainedInSharedPreference(SharedPrefContract.birthday)) {
+        if (mSharedPrefHelper.isContainedInSharedPreference(SharedPrefContract.PREF_BIRTHDAY)) {
             mView.displayBirthday(mSharedPrefHelper.getUserBirthday());
 
         }
-        if (mSharedPrefHelper.isContainedInSharedPreference(SharedPrefContract.gender)) {
+        if (mSharedPrefHelper.isContainedInSharedPreference(SharedPrefContract.PREF_GENDER)) {
             mView.displayGender(mSharedPrefHelper.getUserGender());
         }
 
@@ -75,11 +73,11 @@ public class ProfilePresenter implements ProfileContract.Presenter {
 
 
         HashMap<String,String> mHashMap = new HashMap<>();
-        mHashMap.put(SharedPrefContract.userName, userName);
-        mHashMap.put(SharedPrefContract.birthday, birthday);
-        mHashMap.put(SharedPrefContract.gender, gender);
+        mHashMap.put(SharedPrefContract.PREF_USER_NAME, userName);
+        mHashMap.put(SharedPrefContract.PREF_BIRTHDAY, birthday);
+        mHashMap.put(SharedPrefContract.PREF_GENDER, gender);
 
-        //add to shared preferences
+        //ic_add to shared preferences
         mSharedPrefHelper.putStrings(mHashMap);
 
         mView.displayProfileUpdatedMessage();

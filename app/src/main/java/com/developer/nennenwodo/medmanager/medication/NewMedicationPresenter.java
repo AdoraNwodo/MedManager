@@ -42,7 +42,7 @@ public class NewMedicationPresenter implements NewMedicationContract.Presenter{
 
 
     /**
-     * Performs actions when the add medication button has been clicked
+     * Performs actions when the ic_add medication button has been clicked
      * @param context
      * @param medicationName
      * @param medicationDescription
@@ -65,7 +65,7 @@ public class NewMedicationPresenter implements NewMedicationContract.Presenter{
             return;
         }
 
-        //if user enters an earlier date for medication end date, show toast error message
+        //if ic_default_profile_image enters an earlier date for medication end date, show toast error message
         if(! Utility.isBefore(medicationStartDate, medicationEndDate)){
             mView.displayInvalidDateMessage();
             return;
@@ -80,14 +80,14 @@ public class NewMedicationPresenter implements NewMedicationContract.Presenter{
             mView.displayInvalidFrequencyErrorMessage();
         }
 
-        //get user in current session using shared preferences
+        //get ic_default_profile_image in current session using shared preferences
         SharedPrefHelper mSharedPrefHelper = new SharedPrefHelper(mContext);
         String userID = mSharedPrefHelper.getUserID();
 
         //create new medication instance
         Medication medication = new Medication(userID, medicationName, medicationDescription, medicationFrequencyOrInterval, medicationStartDate, medicationStartTime, medicationEndDate );
 
-        //call to db to add medication
+        //call to db to ic_add medication
         MedicationDBHelper medicationDBHelper = new MedicationDBHelper(context);
         long rowId = medicationDBHelper.addMedication(medication);
 
@@ -126,7 +126,7 @@ public class NewMedicationPresenter implements NewMedicationContract.Presenter{
 
                 String formattedStartDate = Utility.formatDate(day,month,year);
 
-                //add alarm
+                //ic_add alarm
                 //setAlarm(formattedStartDate, medicationEndDate, medicationStartTime, mContext, rowId, medicationFrequencyOrInterval);
                 setAlarm(calStartDate, mContext, rowId, medicationFrequencyOrInterval);
 
@@ -147,13 +147,13 @@ public class NewMedicationPresenter implements NewMedicationContract.Presenter{
      */
     private void setAlarm(Calendar start, Context ctx, long id, int frequency){
 
-        /*Calendar calendar = Calendar.getInstance();
+        /*Calendar ic_calendar = Calendar.getInstance();
 
-        calendar.set(Calendar.YEAR, Utility.getYear(startDate));
-        calendar.set(Calendar.MONTH, Utility.getMonth(startDate));
-        calendar.set(Calendar.DAY_OF_MONTH, Utility.getDay(startDate));
-        calendar.set(Calendar.HOUR_OF_DAY, Utility.getHour(startTime));
-        calendar.set(Calendar.MINUTE, Utility.getMinute(startTime));*/
+        ic_calendar.set(Calendar.YEAR, Utility.getYear(startDate));
+        ic_calendar.set(Calendar.MONTH, Utility.getMonth(startDate));
+        ic_calendar.set(Calendar.DAY_OF_MONTH, Utility.getDay(startDate));
+        ic_calendar.set(Calendar.HOUR_OF_DAY, Utility.getHour(startTime));
+        ic_calendar.set(Calendar.MINUTE, Utility.getMinute(startTime));*/
 
         Intent intent = new Intent(ctx,AlarmReceiver.class);
         intent.putExtra("MEDICATION_ID", (int)id);

@@ -14,7 +14,7 @@
         android:id="@+id/relative_layout_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/settings_list_item_background"
+        android:background="@drawable/bg_settings_list_item"
         android:clickable="true"
         android:focusable="true"
         android:padding="@dimen/activity_horizontal_margin"
@@ -24,7 +24,7 @@
             android:id="@+id/image_profile"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/user"
+            android:src="@drawable/ic_default_profile_image"
             android:layout_alignParentStart="true"
             />
 
@@ -93,7 +93,7 @@
         android:id="@+id/relative_layout_todays_meds"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/settings_list_item_background"
+        android:background="@drawable/bg_settings_list_item"
         android:clickable="true"
         android:focusable="true"
         android:padding="@dimen/activity_horizontal_margin">
@@ -102,7 +102,7 @@
             android:id="@+id/image_view_clock"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/clock"
+            android:src="@drawable/ic_clock"
             android:layout_alignParentStart="true"
             />
 
@@ -144,7 +144,7 @@
         android:id="@+id/relative_layout_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/settings_list_item_background"
+        android:background="@drawable/bg_settings_list_item"
         android:clickable="true"
         android:focusable="true"
         android:padding="@dimen/activity_horizontal_margin">
@@ -153,7 +153,7 @@
             android:id="@+id/image_view_account"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/account"
+            android:src="@drawable/ic_account"
             android:layout_alignParentStart="true"
             />
 
@@ -194,7 +194,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/settings_list_item_background"
+        android:background="@drawable/bg_settings_list_item"
         android:clickable="true"
         android:focusable="true"
         android:padding="@dimen/activity_horizontal_margin">
@@ -204,7 +204,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginTop="5dp"
-            android:src="@drawable/notification"
+            android:src="@drawable/ic_notification"
             android:layout_alignParentStart="true"
             />
 
@@ -257,7 +257,7 @@
         android:id="@+id/relative_layout_faqs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/settings_list_item_background"
+        android:background="@drawable/bg_settings_list_item"
         android:clickable="true"
         android:focusable="true"
         android:padding="@dimen/activity_horizontal_margin">
@@ -266,7 +266,7 @@
             android:id="@+id/image_view_faq"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/faq"
+            android:src="@drawable/ic_question_mark"
             android:layout_alignParentStart="true"
             />
 
@@ -306,7 +306,7 @@
         android:id="@+id/relative_layout_contact_me"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/settings_list_item_background"
+        android:background="@drawable/bg_settings_list_item"
         android:clickable="true"
         android:focusable="true"
         android:padding="@dimen/activity_horizontal_margin">
@@ -315,7 +315,7 @@
             android:id="@+id/image_view_contact_me"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/envelope"
+            android:src="@drawable/ic_envelope"
             android:layout_alignParentStart="true"
             />
 

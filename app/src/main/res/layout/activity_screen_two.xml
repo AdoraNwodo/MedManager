@@ -15,7 +15,7 @@
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/alarm_clock"
+            android:src="@drawable/ic_alarm_clock"
             />
 
         <TextView

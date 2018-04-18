@@ -157,7 +157,7 @@ public class HomeFragment extends Fragment implements RecyclerItemTouchHelper.Re
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        //listens to search view on query text change and filters recycler view
+        //listens to ic_search view on query text change and filters recycler view
         newText = newText.toLowerCase().trim();
         ArrayList<Medication> medicationArrayList = new ArrayList<>();
         for(Medication medication : medicationList){

@@ -110,14 +110,14 @@ public class BootReceiver extends BroadcastReceiver {
      */
     private void setAlarm(Calendar start, Context ctx, int id, int frequency){
 
-        /*Calendar calendar = Calendar.getInstance();
+        /*Calendar ic_calendar = Calendar.getInstance();
 
 
-        calendar.set(Calendar.YEAR, Utility.getYear(startDate));
-        calendar.set(Calendar.MONTH, Utility.getMonth(startDate));
-        calendar.set(Calendar.DAY_OF_MONTH, Utility.getDay(startDate));
-        calendar.set(Calendar.HOUR_OF_DAY, Utility.getHour(startTime));
-        calendar.set(Calendar.MINUTE, Utility.getMinute(startTime));*/
+        ic_calendar.set(Calendar.YEAR, Utility.getYear(startDate));
+        ic_calendar.set(Calendar.MONTH, Utility.getMonth(startDate));
+        ic_calendar.set(Calendar.DAY_OF_MONTH, Utility.getDay(startDate));
+        ic_calendar.set(Calendar.HOUR_OF_DAY, Utility.getHour(startTime));
+        ic_calendar.set(Calendar.MINUTE, Utility.getMinute(startTime));*/
 
         Intent intent = new Intent(ctx,AlarmReceiver.class);
         intent.putExtra("MEDICATION_ID", id);

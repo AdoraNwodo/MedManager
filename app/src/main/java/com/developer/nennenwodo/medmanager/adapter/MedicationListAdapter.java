@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -64,9 +63,9 @@ public class MedicationListAdapter extends RecyclerView.Adapter<MedicationListAd
         holder.dosage.setText("To be taken " + item.getInterval() + " time(s) a day ");
         int daysBetween = (int) Utility.daysBetween(item.getStartDate(), item.getEndDate());
         if(daysBetween >= 0){
-            holder.status.setImageResource(R.drawable.hourglass);
+            holder.status.setImageResource(R.drawable.ic_hour_glass);
         }else{
-            holder.status.setImageResource(R.drawable.checked);
+            holder.status.setImageResource(R.drawable.ic_checked);
         }
         holder.viewBackground.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,7 +103,7 @@ public class MedicationListAdapter extends RecyclerView.Adapter<MedicationListAd
     }
 
     /**
-     * Sets filter for search function.
+     * Sets filter for ic_search function.
      * @param newMedicationList
      */
     public  void setFilter(ArrayList<Medication> newMedicationList){

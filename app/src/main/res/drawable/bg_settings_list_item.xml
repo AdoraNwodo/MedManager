@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true"
-        android:drawable="@drawable/view_pressed" />
+        android:drawable="@drawable/bg_relative_layout_pressed" />
     <item  android:state_focused="false"
-        android:drawable="@drawable/view_normal" />
+        android:drawable="@drawable/bg_relative_layout_normal" />
 </selector>

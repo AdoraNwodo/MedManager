@@ -20,7 +20,7 @@
             android:id="@+id/imageview_user_profile_picture"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/user"
+            android:src="@drawable/ic_default_profile_image"
             android:layout_centerInParent="true"
         />
 
@@ -120,7 +120,7 @@
         android:layout_width="match_parent"
         android:layout_height="34dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:background="@drawable/button_gradient"
+        android:background="@drawable/btn_gradient"
         android:textColor="@android:color/white"
         android:text="@string/save"
         android:textSize="13sp"

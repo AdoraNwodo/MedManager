@@ -66,7 +66,7 @@ public class MedicationDBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
-        //delete tables and add them back on database upgrade
+        //delete tables and ic_add them back on database upgrade
         sqLiteDatabase.execSQL(SQL_DROP_MEDICATION_INFORMATION_TABLE);
         sqLiteDatabase.execSQL(SQL_DROP_USER_INFORMATION_TABLE);
         onCreate(sqLiteDatabase);
@@ -97,8 +97,8 @@ public class MedicationDBHelper extends SQLiteOpenHelper {
     }
 
     /**
-     * Checks if a user with a given id has logged in before. If so, their details are returned.
-     * If not, a new user instance is created and logged to the database
+     * Checks if a ic_default_profile_image with a given id has logged in before. If so, their details are returned.
+     * If not, a new ic_default_profile_image instance is created and logged to the database
      * @param user
      * @return
      */
@@ -106,7 +106,7 @@ public class MedicationDBHelper extends SQLiteOpenHelper {
 
         database = this.getWritableDatabase();
 
-        //checks if user exists in database before adding
+        //checks if ic_default_profile_image exists in database before adding
         String[] projections = { MedicationDBContract.UserEntry.USER_ID ,
                 MedicationDBContract.UserEntry.USER_NAME,
                 MedicationDBContract.UserEntry.GENDER,
@@ -119,7 +119,7 @@ public class MedicationDBHelper extends SQLiteOpenHelper {
                 ,null,null,null, null);
 
         if(cursor.moveToFirst()) {
-            //user exists
+            //ic_default_profile_image exists
             User existingUser =  new User(cursor.getString(cursor.getColumnIndex(MedicationDBContract.UserEntry.USER_ID)),
                     cursor.getString(cursor.getColumnIndex(MedicationDBContract.UserEntry.USER_NAME)),
                     cursor.getString(cursor.getColumnIndex(MedicationDBContract.UserEntry.GENDER)),
@@ -133,7 +133,7 @@ public class MedicationDBHelper extends SQLiteOpenHelper {
             return existingUser;
 
         }else{
-            //user does not exist - create user record
+            //ic_default_profile_image does not exist - create ic_default_profile_image record
             ContentValues contentValues = new ContentValues();
             contentValues.put(MedicationDBContract.UserEntry.USER_ID, user.getUserID());
             contentValues.put(MedicationDBContract.UserEntry.USER_NAME, user.getUserName());
@@ -215,7 +215,7 @@ public class MedicationDBHelper extends SQLiteOpenHelper {
     }
 
     /**
-     * Updates a users notification status
+     * Updates a users ic_notification status
      * @param userID
      * @param status
      */
@@ -234,7 +234,7 @@ public class MedicationDBHelper extends SQLiteOpenHelper {
 
 
     /**
-     * Fetches the medications belonging to a particular category and user
+     * Fetches the medications belonging to a particular category and ic_default_profile_image
      * @param month
      * @param year
      * @param userID
@@ -257,7 +257,7 @@ public class MedicationDBHelper extends SQLiteOpenHelper {
     }
 
     /**
-     * Fetches all medications belonging to a particular user
+     * Fetches all medications belonging to a particular ic_default_profile_image
      * @param userID
      * @return
      */
@@ -283,7 +283,7 @@ public class MedicationDBHelper extends SQLiteOpenHelper {
     }
 
     /**
-     * Fetches all medications belonging to a particular user that have not been completed
+     * Fetches all medications belonging to a particular ic_default_profile_image that have not been completed
      * @param userID
      * @return
      */
@@ -371,7 +371,7 @@ public class MedicationDBHelper extends SQLiteOpenHelper {
     }
 
     /**
-     * Deletes all medications belonging to a particular user
+     * Deletes all medications belonging to a particular ic_default_profile_image
      * @param userId
      */
     public void deleteAllUsersMedications(String userId){
@@ -385,7 +385,7 @@ public class MedicationDBHelper extends SQLiteOpenHelper {
     }
 
     /**
-     * Deletes a user record with a particular id in the database
+     * Deletes a ic_default_profile_image record with a particular id in the database
      * @param userId
      */
     public void deleteUsersAccount(String userId){

@@ -1,7 +1,7 @@
 package com.developer.nennenwodo.medmanager.model;
 
 /**
- * User Model. Defines the user entity and the actions that can be performed on the model
+ * User Model. Defines the ic_default_profile_image entity and the actions that can be performed on the model
  */
 public class User {
 

@@ -70,10 +70,10 @@ public class DashboardActivity extends BaseActivity implements HomeFragment.OnFr
 
         Context context = DashboardActivity.this;
         //SharedPreferences sharedPref = context.getSharedPreferences(
-                //SharedPrefContract.userPreference, Context.MODE_PRIVATE);
+                //SharedPrefContract.PREF_MEDMANAGER, Context.MODE_PRIVATE);
         SharedPrefHelper mSharedPrefHelper = new SharedPrefHelper(context);
 
-        //if user is not logged in, return to sign in page
+        //if ic_default_profile_image is not logged in, return to sign in page
         if(! mSharedPrefHelper.isLoggedIn()){
             Intent intent = new Intent(DashboardActivity.this, SignInActivity.class);
             startActivity(intent);
@@ -96,7 +96,7 @@ public class DashboardActivity extends BaseActivity implements HomeFragment.OnFr
         getSupportFragmentManager().addOnBackStackChangedListener(
                 new FragmentManager.OnBackStackChangedListener() {
                     public void onBackStackChanged() {
-                        //Find active fragment when back button is pressed and set active fragment
+                        //Find active fragment when back button is bg_relative_layout_pressed and set active fragment
                         Fragment homeFragment = fragmentManager.findFragmentByTag("home-fragment");
                         Fragment monthlyFragment = fragmentManager.findFragmentByTag("monthly-categories-fragment");
                         Fragment settingsFragment = fragmentManager.findFragmentByTag("settings-fragment");

@@ -9,22 +9,22 @@ public class SharedPrefContract {
     private SharedPrefContract(){}
 
     //preference name
-    public static final String userPreference = "medmanager.pref";
+    public static final String PREF_MEDMANAGER = "PREF_MEDMANAGER";
 
     //for first installation
-    public static final String installed = "installed";
+    public static final String PREF_INSTALLED = "PREF_INSTALLED";
 
 
-    //for user data
-    public static final String fullName = "fullName";
-    public static final String userName = "userName";
-    public static final String userEmail = "userEmail";
-    public static final String isLoggedIn = "loggedIn";
-    public static final String profileImageURL = "profileImageURL";
-    public static final String userID = "userID";
-    public static final String birthday = "birthday";
-    public static final String gender = "gender";
-    public static final String notifications_on = "notifications_on";
+    //for ic_default_profile_image data
+    public static final String PREF_FULL_NAME = "PREF_FULL_NAME";
+    public static final String PREF_USER_NAME = "PREF_USER_NAME";
+    public static final String PREF_USER_EMAIL = "PREF_USER_EMAIL";
+    public static final String PREF_IS_LOGGED_IN = "PREF_IS_LOGGED_IN";
+    public static final String PREF_PROFILE_IMAGE = "PREF_PROFILE_IMAGE";
+    public static final String PREF_USER_ID = "PREF_USER_ID";
+    public static final String PREF_BIRTHDAY = "PREF_BIRTHDAY";
+    public static final String PREF_GENDER = "PREF_GENDER";
+    public static final String PREF_NOTIFICATION_TURNED_ON = "PREF_NOTIFICATION_TURNED_ON";
 
 
 }

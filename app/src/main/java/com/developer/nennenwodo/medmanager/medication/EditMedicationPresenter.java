@@ -100,7 +100,7 @@ public class EditMedicationPresenter implements EditMedicationContract.Presenter
             return;
         }
 
-        //if user enters an earlier date for medication end date, show toast error message
+        //if ic_default_profile_image enters an earlier date for medication end date, show toast error message
         if(! Utility.isBefore(medicationStartDate, medicationEndDate)){
             mView.displayInvalidDateMessage();
             return;
@@ -116,7 +116,7 @@ public class EditMedicationPresenter implements EditMedicationContract.Presenter
 
         }
 
-        //get user in current session using shared preferences
+        //get ic_default_profile_image in current session using shared preferences
         SharedPrefHelper mSharedPrefHelper = new SharedPrefHelper(mContext);
         String userID = mSharedPrefHelper.getUserID();
 
@@ -162,7 +162,7 @@ public class EditMedicationPresenter implements EditMedicationContract.Presenter
 
                 String formattedStartDate = Utility.formatDate(day,month,year);
 
-                //add alarm
+                //ic_add alarm
                 //setAlarm(formattedStartDate, medicationEndDate, medicationStartTime, mContext, rowId, medicationFrequencyOrInterval);
                 setAlarm(calStartDate, mContext, medicationID, medicationFrequencyOrInterval);
 
