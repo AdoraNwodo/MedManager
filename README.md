@@ -45,7 +45,7 @@ If you discover any security related issues, please email nennenwodo@gmail.com i
 
 ## License
 
-osl-3.0. Please see the [license file](https://github.com/AdoraNwodo/MedManager/blob/master/LICENSE) for more information.
+MIT. Please see the [license file](https://github.com/AdoraNwodo/MedManager/blob/master/LICENSE) for more information.
 
 
 
