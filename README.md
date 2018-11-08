@@ -7,7 +7,7 @@
 [![Issues](https://img.shields.io/github/issues/AdoraNwodo/MedManager.svg)](https://github.com/AdoraNwodo/MedManager/issues)
 [![Forks](https://img.shields.io/github/forks/AdoraNwodo/MedManager.svg)](https://github.com/AdoraNwodo/MedManager/networks/members)
 [![Stars](https://img.shields.io/github/stars/AdoraNwodo/MedManager.svg)](https://github.com/AdoraNwodo/MedManager/stargazers)
-[![GitHub followers](https://img.shields.io/github/followers/AdoraNwodo/MedManager.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/AdoraNwodo?tab=followers)
+[![GitHub followers](https://img.shields.io/github/followers/AdoraNwodo.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/AdoraNwodo?tab=followers)
 
 
 Med-Manager is a simple app that helps patients remember  to take their medication and provides tracking for the intake of the prescribed medication intake.
