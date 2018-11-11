@@ -50,3 +50,4 @@ MIT. Please see the [license file](https://github.com/AdoraNwodo/MedManager/blob
 
 ## Contributing
 
+Contributions are welcome and will be fully credited.
