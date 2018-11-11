@@ -48,5 +48,5 @@ If you discover any security related issues, please email nennenwodo@gmail.com i
 
 MIT. Please see the [license file](https://github.com/AdoraNwodo/MedManager/blob/master/LICENSE) for more information.
 
-
+## Contributing
 
