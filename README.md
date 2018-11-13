@@ -11,7 +11,7 @@
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/AdoraNwodo/MedManager/)
 
 
-Med-Manager is a simple app that helps patients remember  to take their medication and provides tracking for the intake of the prescribed medication intake.
+Med-Manager is a simple android app that helps patients remember  to take their medication and provides tracking for the intake of the prescribed medication intake.
 
 <strong>Features</strong><br />
 The application allows users sign up using Google Social Authentication. <br />
